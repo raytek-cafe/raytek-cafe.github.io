@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Get the current script's directory
 const scriptPath = document.currentScript.src; // Get the path of the currently executing script
-const scriptDir = scriptPath.substring(0, scriptPath.lastIndexOf('/') + 1); // Extract the directory path from the script path
+const scriptDir = scriptPath.substring(0, scriptPath.lastIndexOf("/") + 1); // Extract the directory path from the script path
 
 // Header background image changer on 10 clicks
 document.addEventListener("DOMContentLoaded", function () {
@@ -55,17 +55,25 @@ document.addEventListener("DOMContentLoaded", function () {
   let clickCount = 0;
   const images = [
     scriptDir + "../styles/img/header-bg.jpg", // original
-    scriptDir + "../styles/img/header-bg-alt1.jpg", // add your alternate images here
-    scriptDir + "../img/header-bg-alt2.jpg",
+    scriptDir + "../styles/img/header-bg-alt1.jpg",
+    scriptDir + "../styles/img/header-bg-alt2.jpg",
   ];
-  let currentImage = 0;
+
+  // Load persisted image index or default to 0
+  let currentImage = parseInt(localStorage.getItem("headerImageIndex")) || 0;
+
+  // Set initial background on page load
+  header.style.background = `linear-gradient(to right, black 200px, transparent 70%), url("${images[currentImage]}") no-repeat center 35%`;
+  header.style.backgroundSize = "cover"; // Ensure the background covers the header
 
   header.addEventListener("click", function () {
     clickCount++;
     if (clickCount === 10) {
       // Cycle to next image
       currentImage = (currentImage + 1) % images.length;
-      header.style.backgroundImage = `linear-gradient(to right, black 200px, transparent 70%), url("${images[currentImage]}")`;
+      header.style.background = `linear-gradient(to right, black 200px, transparent 70%), url("${images[currentImage]}") no-repeat center 35%`;
+      header.style.backgroundSize = "cover"; // Ensure the background covers the header
+      localStorage.setItem("headerImageIndex", currentImage); // Persist selection
       clickCount = 0;
     }
   });
