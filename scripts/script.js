@@ -1,4 +1,14 @@
-const themes = ["theme-red", "theme-orange", "theme-yellow", "theme-green", "theme-aquamarine", "theme-blue", "theme-violet", "theme-pink", "theme-gray"]; // List of available themes
+const themes = [
+  "theme-red",
+  "theme-orange",
+  "theme-yellow",
+  "theme-green",
+  "theme-aquamarine",
+  "theme-blue",
+  "theme-violet",
+  "theme-pink",
+  "theme-gray",
+]; // List of available themes
 // "theme-red" is now the default
 
 function getCurrentThemeIndex() {
@@ -31,4 +41,32 @@ document.addEventListener("DOMContentLoaded", function () {
       setTheme(idx); // Set the new theme based on the updated index
     };
   }
+});
+
+// Get the current script's directory
+const scriptPath = document.currentScript.src; // Get the path of the currently executing script
+const scriptDir = scriptPath.substring(0, scriptPath.lastIndexOf('/') + 1); // Extract the directory path from the script path
+
+// Header background image changer on 10 clicks
+document.addEventListener("DOMContentLoaded", function () {
+  const header = document.querySelector(".header");
+  if (!header) return;
+
+  let clickCount = 0;
+  const images = [
+    scriptDir + "../styles/img/header-bg.jpg", // original
+    scriptDir + "../styles/img/header-bg-alt1.jpg", // add your alternate images here
+    scriptDir + "../img/header-bg-alt2.jpg",
+  ];
+  let currentImage = 0;
+
+  header.addEventListener("click", function () {
+    clickCount++;
+    if (clickCount === 10) {
+      // Cycle to next image
+      currentImage = (currentImage + 1) % images.length;
+      header.style.backgroundImage = `linear-gradient(to right, black 200px, transparent 70%), url("${images[currentImage]}")`;
+      clickCount = 0;
+    }
+  });
 });
