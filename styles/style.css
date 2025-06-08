@@ -108,7 +108,7 @@ body {
 }
 
 .page {
-  max-width: 1000px; /* Set container width to 45% of the viewport */
+  max-width: 800px; /* Set container width to 45% of the viewport */
   box-sizing: border-box; /* Include padding and border in element's total width and height */
   background-color: var(--page-color); /* Dark background for the container */
   color: #ebebeb; /* Text color */
@@ -124,7 +124,7 @@ body {
 
 .gap {
   min-height: 50px; /* Minimum height for gap elements */
-  user-select: none; /* Prevent text selection */;
+  user-select: none; /* Prevent text selection */
 }
 
 /* ======================================================================================================= links */
@@ -295,7 +295,7 @@ th {
 }
 
 /* =========================================================================================== responsive layout */
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .container {
     padding: 0 2%; /* Reduce padding for smaller screens */
   }
@@ -313,7 +313,7 @@ th {
   tr,
   th,
   td {
-    font-size: 1.7vw; /* Smaller font size for tables on small screens */
     padding: 4px;
+    font-size: clamp(6pt, 1.5vw, 9pt); /* Responsive font size for tables */
   }
 }
