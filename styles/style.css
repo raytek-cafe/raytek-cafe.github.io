@@ -215,9 +215,6 @@ a:hover {
 
 #theme-toggle:hover {
   background-color: #070707; /* Light background on hover */
-  text-shadow: 0 0 5px var(--glow-color), 0 0 10px var(--glow-color),
-    0 0 20px var(--glow-color), 0 0 40px var(--glow-color); /* Red glow on text */
-  box-shadow: 0 0 0 1px #2d2d2d; /* Outline on button (shadow can be animated as opposed to border) */
   cursor: pointer; /* Pointer cursor on hover */
 }
 
