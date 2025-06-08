@@ -316,4 +316,9 @@ th {
   .navbar a {
     padding: 8px 10px; /* Adjust padding for smaller screens */
   }
+
+  table,tr,th,td {
+    font-size: 7pt; /* Smaller font size for tables on small screens */
+    padding: 0px; /* Remove padding for tables on small screens */
+  }
 }
