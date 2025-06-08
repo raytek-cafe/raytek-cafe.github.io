@@ -104,7 +104,7 @@ body {
 }
 
 .page {
-  max-width: 800px; /* Set max container width to 800px */
+  max-width: 850px; /* Set max container width to 800px */
   box-sizing: border-box; /* Include padding and border in element's total width and height */
   background-color: var(--page-color); /* Dark background for the container */
   color: #ebebeb; /* Text color */
@@ -292,13 +292,21 @@ th {
 
 /* =========================================================================================== responsive layout */
 @media (max-width: 900px) {
+  .header {
+    padding: 0 20px; /* Reduce padding for smaller screens */
+  }
+
   .container {
     padding: 0 2%; /* Reduce padding for smaller screens */
   }
 
+  .content {
+    padding: 0px 20px; /* Reduce padding for smaller screens */
+  }
+
   .navbar {
     justify-content: initial; /* Stack navbar items vertically */
-    padding-left: 30px; /* Add padding to the left for smaller screens */
+    padding-left: 10px; /* Add padding to the left for smaller screens */
   }
 
   .navbar a {
