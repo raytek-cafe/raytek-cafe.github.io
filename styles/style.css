@@ -319,6 +319,6 @@ th {
 
   table,tr,th,td {
     font-size: 7pt; /* Smaller font size for tables on small screens */
-    padding: 0px; /* Remove padding for tables on small screens */
+    padding: 4px; /* Remove padding for tables on small screens */
   }
 }
