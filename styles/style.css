@@ -304,7 +304,7 @@ th {
   }
 
   .navbar {
-    justify-content: initial; /* Stack navbar items vertically */
+    justify-content: initial; /* Return navbar icons to the left */
     padding-left: 10px; /* Add padding to the left for smaller screens */
   }
 
@@ -321,6 +321,7 @@ th {
   th,
   td {
     padding: 4px;
-    font-size: clamp(5px, 1.5vw, 9pt); /* Responsive font size for tables */
+    font-size: clamp(6px, 1.5vw, 9pt); /* Responsive font size for tables */
+    overflow-x: auto;
   }
 }
