@@ -292,22 +292,41 @@ th {
   }
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1200px) {
   .container {
-    width: 70%; /* Adjust container width for smaller screens */
+    width: 70%; /* Adjust container width for medium screens */
+  }
+
+  table,
+  tr,
+  th,
+  td {
+    font-size: 1vw; /* Adjust font size for tables on medium screens */
+    padding: 4px;
   }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 1050px) {
   .container {
     width: 95%; /* Adjust container width for mobile devices */
   }
+  table, tr, th, td {
+    font-size: 1.05vw
+  }
 }
 
-@media (max-width: 700px) {
-  table,tr,th,td {
-    font-size: 7.5pt;
-    padding: 4px; /* Adjust padding for tables on smaller screens */
+@media (max-width: 900px) {
+  table, tr, th, td {
+    font-size: 1.2vw;
+  }
+}
+
+@media (max-width: 800px) {
+  table,
+  tr,
+  th,
+  td {
+    font-size: 1.3vw; /* Adjust font size for tables on smaller screens */
   }
 }
 
@@ -317,15 +336,17 @@ th {
   }
   .navbar {
     justify-content: initial; /* Stack navbar items vertically */
-    padding-left: 5%; /* Add padding to the left for smaller screens */ 
+    padding-left: 5%; /* Add padding to the left for smaller screens */
   }
 
   .navbar a {
     padding: 8px 10px; /* Adjust padding for smaller screens */
   }
 
-  table,tr,th,td {
-    font-size: 6pt; /* Smaller font size for tables on small screens */
-    padding: 2px; /* Remove padding for tables on small screens */
+  table,
+  tr,
+  th,
+  td {
+    font-size: 1.5vw; /* Smaller font size for tables on small screens */
   }
 }
