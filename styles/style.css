@@ -318,7 +318,7 @@ th {
   }
 
   table,tr,th,td {
-    font-size: 7pt; /* Smaller font size for tables on small screens */
-    padding: 4px; /* Remove padding for tables on small screens */
+    font-size: 6.5pt; /* Smaller font size for tables on small screens */
+    padding: 2px; /* Remove padding for tables on small screens */
   }
 }
