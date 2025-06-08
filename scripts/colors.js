@@ -1,4 +1,4 @@
-const themes = ["theme-red", "theme-blue", "theme-green", "theme-violet"];
+const themes = ["theme-red", "theme-aquamarine", "theme-blue", "theme-green", "theme-violet", "theme-orange", "theme-yellow", "theme-pink", "theme-gray"]; // List of available themes
 // "theme-red" is now the default
 
 function getCurrentThemeIndex() {
