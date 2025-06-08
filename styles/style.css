@@ -90,31 +90,41 @@
 
 /* ================================================================================================= base styles */
 
-html,
+html {
+  font-size: 10pt; /* Base font size */
+}
+
 body {
   margin: 0 auto; /* Get rid of default margin */
   background-color: #191919; /* Dark background incase the image fails to load */
   background-image: url(img/bg.png); /* Background image */
   font-family: "Ruberoid", sans-serif; /* Use Ruberoid font and fallback to sans-serif */
-  font-size: 10pt; /* Base font size */
   font-weight: normal; /* Normal font weight */
-  height: 100vh; /* Full viewport height */
-  overflow: auto; /* Allow scrolling if content overflows */
+  min-height: 100vh; /* Minimum height of the viewport */
 }
 
 .container {
-  width: 45%; /* Set container width to 45% of the viewport */
+  padding: 0 5%; /* Padding for the container */
+}
+
+.page {
+  max-width: 1000px; /* Set container width to 45% of the viewport */
   box-sizing: border-box; /* Include padding and border in element's total width and height */
   background-color: var(--page-color); /* Dark background for the container */
   color: #ebebeb; /* Text color */
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 1), 0 0 150px var(--shadow-color); /* Shadow for depth */
   border: 2px solid #464646; /* Border for the container */
   outline: 3px solid #1c1c1c; /* Outline for the container */
-  min-height: 94vh; /* Minimum height to fill the viewport */
-  margin: 3vh auto; /* Center the container with vertical margin */
+  margin: 0 auto; /* Center the container horizontally */
   border-radius: 4px; /* Rounded corners */
   display: flex; /* Use flexbox for layout */
   flex-direction: column; /* Stack children vertically */
+  min-height: calc(100vh - 100px); /* Minimum height of the container */
+}
+
+.gap {
+  min-height: 50px; /* Minimum height for gap elements */
+  user-select: none; /* Prevent text selection */;
 }
 
 /* ======================================================================================================= links */
@@ -285,55 +295,11 @@ th {
 }
 
 /* =========================================================================================== responsive layout */
-
-@media (max-width: 1600px) {
-  .container {
-    width: 55%; /* Adjust container width for larger screens */
-  }
-}
-
-@media (max-width: 1200px) {
-  .container {
-    width: 70%; /* Adjust container width for medium screens */
-  }
-
-  table,
-  tr,
-  th,
-  td {
-    font-size: 1vw; /* Adjust font size for tables on medium screens */
-    padding: 4px;
-  }
-}
-
-@media (max-width: 1050px) {
-  .container {
-    width: 95%; /* Adjust container width for mobile devices */
-  }
-  table, tr, th, td {
-    font-size: 1.15vw
-  }
-}
-
-@media (max-width: 900px) {
-  table, tr, th, td {
-    font-size: 1.3vw;
-  }
-}
-
 @media (max-width: 800px) {
-  table,
-  tr,
-  th,
-  td {
-    font-size: 1.5vw; /* Adjust font size for tables on smaller screens */
-  }
-}
-
-@media (max-width: 600px) {
   .container {
-    width: 98%; /* Full width for very small screens */
+    padding: 0 2%; /* Reduce padding for smaller screens */
   }
+
   .navbar {
     justify-content: initial; /* Stack navbar items vertically */
     padding-left: 5%; /* Add padding to the left for smaller screens */
