@@ -103,12 +103,8 @@ body {
   min-height: 100vh; /* Minimum height of the viewport */
 }
 
-.container {
-  padding: 0 5%; /* Padding for the container */
-}
-
 .page {
-  max-width: 800px; /* Set container width to 45% of the viewport */
+  max-width: 800px; /* Set max container width to 800px */
   box-sizing: border-box; /* Include padding and border in element's total width and height */
   background-color: var(--page-color); /* Dark background for the container */
   color: #ebebeb; /* Text color */
@@ -149,7 +145,7 @@ a:hover {
   display: flex; /* Flexbox for centering content */
   flex-direction: column; /* Order header content vertically */
   justify-content: center; /* Center content vertically */
-  padding-left: 5%; /* Padding on the left */
+  padding-left: 40px; /* Padding on the left */
   text-shadow: 0 0 5px white, 0 0 40px white; /* Header text glow */
   border-radius: 2px 2px 0 0; /* Rounded corners for the top of the header */
 }
@@ -206,7 +202,7 @@ a:hover {
 
 #theme-toggle {
   position: absolute; /* Position toggle button absolutely */
-  right: 5%; /* Right align toggle button */
+  right: 40px; /* Right align toggle button */
   background: transparent; /* Transparent background for toggle button */
   box-sizing: border-box; /* Include padding and border in element's total width and height */
   border-radius: 3px; /* Rounded corners for toggle button */
@@ -233,12 +229,12 @@ a:hover {
 /* ===================================================================================================== content */
 
 .content {
-  padding: 10px 5%; /* Padding for content area */
+  padding: 10px 40px; /* Padding for content area */
   line-height: 1.8; /* Line height for readability */
   box-shadow: inset 10px 0 20px -10px rgba(0, 0, 0, 0.5),
     /* Left side */ inset -10px 0 20px -10px rgba(0, 0, 0, 0.5); /* Right side */
   flex-grow: 1; /* Allow content to grow and fill available space */
-  padding-bottom: 5%; /* Padding at the bottom of content */
+  padding-bottom: 40px; /* Padding at the bottom of content */
 }
 
 /* ====================================================================================================== tables */
@@ -249,7 +245,7 @@ table {
   font-size: 9pt; /* Font size for table text */
   line-height: 1.6; /* Line height for table text */
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Shadow for tables */
-  margin-bottom: 1%; /* Margin at the bottom of tables */
+  margin-bottom: 20px; /* Margin at the bottom of tables */
 }
 
 th,
@@ -279,7 +275,7 @@ th {
 /* ====================================================================================================== footer */
 
 .footer {
-  padding: 10px 5%; /* Padding for footer area */
+  padding: 10px 40px; /* Padding for footer area */
   border-top: 2px solid #464646; /* Top border for footer */
   margin-top: auto; /* Push footer to the bottom of the container */
   font-family: "Ruberoid Light", sans-serif; /* Use Ruberoid Light font for footer */
@@ -302,7 +298,7 @@ th {
 
   .navbar {
     justify-content: initial; /* Stack navbar items vertically */
-    padding-left: 5%; /* Add padding to the left for smaller screens */
+    padding-left: 30px; /* Add padding to the left for smaller screens */
   }
 
   .navbar a {
@@ -314,6 +310,6 @@ th {
   th,
   td {
     padding: 4px;
-    font-size: clamp(6pt, 1.5vw, 9pt); /* Responsive font size for tables */
+    font-size: clamp(5px, 1.5vw, 9pt); /* Responsive font size for tables */
   }
 }
