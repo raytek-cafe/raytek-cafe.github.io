@@ -312,6 +312,10 @@ th {
     padding: 8px 10px; /* Adjust padding for smaller screens */
   }
 
+  #theme-toggle {
+    right: 10px; /* Adjust position for smaller screens */
+  }
+
   table,
   tr,
   th,
