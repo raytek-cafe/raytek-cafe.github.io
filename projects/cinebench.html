@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/style.css" type="text/css" />
+    <title>raytek Cinebench Scoreboard - raytek.cafe</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="gap">&nbsp;</div>
+      <div class="page-container">
+        <div class="page">
+          <div class="header">
+            <span class="title"
+              ><a target="_blank" href="../index.html">raytek.cafe</a></span
+            >
+            <span class="subtitle">making tech fun again</span>
+            <span class="header-right">&nbsp;</span>
+          </div>
+          <div class="navbar">
+            <a href="../index.html">home</a>
+            <a href="../about.html">about</a>
+            <a href="../projects.html">projects</a>
+            <a href="../contact.html">contact</a>
+            <button id="theme-toggle">
+              <img src="../styles/img/theme-toggle.png" alt="Toggle theme" />
+            </button>
+          </div>
+          <div class="player">
+            <audio id="audio">
+              <source
+                src="../audio/PlayStation_Core_v2-IRLCOMPLEX.mp3"
+                type="audio/mpeg"
+              />
+            </audio>
+            <button id="play-pause">⏵</button>
+            <input
+              type="range"
+              id="seekbar"
+              value="0"
+              min="0"
+              max="100"
+              step="1"
+            />
+            <input
+              type="range"
+              id="volume-slider"
+              value="100"
+              min="0"
+              max="100"
+              step="1"
+            />
+          </div>
+          <div class="content">
+            <h1>raytek Cinebench Scoreboard</h1>
+            <p>
+              <a
+                href="https://www.guru3d.com/download/download-maxon-cinebench-r23/"
+                target="_blank"
+                >Cinebench R23 from Guru3D</a
+              >
+            </p>
+            <h3>Multi thread</h3>
+            <table>
+              <tr>
+                <th>#</th>
+                <th>Score</th>
+                <th>User</th>
+                <th>CPU</th>
+                <th>Power/Temps</th>
+                <th>Notes</th>
+                <th>Date</th>
+                <th>Screenshot</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>20198</td>
+                <td>ANightly</td>
+                <td>Ryzen 9 9700X</td>
+                <td><b>Max. T:</b> 70°C</td>
+                <td class="table-notes">Completed 16 passes <br /></td>
+                <td>06.04.2025</td>
+                <td>
+                  <a target="_blank" href="https://files.catbox.moe/fm5gyi.png"
+                    >Link</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>16723</td>
+                <td>amrls</td>
+                <td>Ryzen 7 8845HS</td>
+                <td>
+                  <b>Max. P:</b> 82W <br />
+                  <b>Avg. P:</b> 72W <br />
+                  <b>Avg. T:</b> 100°C
+                </td>
+                <td class="table-notes">
+                  <b>Legion Slim 5 Gen 9 2024</b> (16AHP9); <br />
+                  Completed 13 passes <br />
+                </td>
+                <td>06.05.2025</td>
+                <td>
+                  <a target="_blank" href="/img-cinebench/legion-mc.png">Link</a>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>10698</td>
+                <td>ImSwordQueen</td>
+                <td>Ryzen 5 5600X</td>
+                <td><b>Max. T:</b> 60°C</td>
+                <td>-</td>
+                <td>07.04.2025</td>
+                <td>
+                  <a target="_blank" href="https://files.catbox.moe/vrk3cg.png"
+                    >Link</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>10231</td>
+                <td>jade</td>
+                <td>Ryzen 7 4800H</td>
+                <td>
+                  <b>Max. P:</b> 61W <br />
+                  <b>Avg. P:</b> 52W <br />
+                  <b>Avg. T:</b> 95°C
+                </td>
+                <td class="table-notes">
+                  <b>TUF A15 2020</b> (FA506IU);<br />
+                  Last repasted in November 2021 (poor thermals) <br />
+                </td>
+                <td>06.04.2025</td>
+                <td>
+                  <a target="_blank" href="/img-cinebench/tuf-mc.png"
+                    >Link</a
+                  >
+                  <br /><a
+                    href="https://www.reddit.com/r/AMDLaptops/comments/jvrlgu/cinebench_r23_ryzen_7_4800h_asus_tuf_a15_better/"
+                    >Baseline</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>8562</td>
+                <td>Ardaninho</td>
+                <td>Ryzen 5 5600H</td>
+                <td>
+                  <b>Max. T:</b> 98°C <br />
+                  <b></b>
+                </td>
+                <td class="table-notes">
+                  <b>IdeaPad Gaming 3</b> (15ACH6);<br />Last repasted in
+                  January 2023
+                </td>
+                <td>08.06.2025</td>
+                <td>
+                  <a target="_blank" href="/img-cinebench/ardan-mc.png">Link</a>
+                </td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>7982</td>
+                <td>sealy</td>
+                <td>Ryzen 5 5500</td>
+                <td>62W@87°C</td>
+                <td>-</td>
+                <td>09.06.2025</td>
+                <td>
+                  <a target="_blank" href="/img-cinebench/sealy.png">Link</a>
+                </td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>5251</td>
+                <td>xodus</td>
+                <td>Core i5 10300H</td>
+                <td>40W@92°C</td>
+                <td class="table-notes">
+                  <b>MSI GF63 Thin</b>; <br />
+                  Enabled turbo Mode in laptop BIOS <br />
+                </td>
+                <td>06.04.2025</td>
+                <td>
+                  <a target="_blank" href="https://files.catbox.moe/at3xk0.png"
+                    >Link</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>3116</td>
+                <td>Arima</td>
+                <td>Xeon E3-1220 v3</td>
+                <td>50W@79°C</td>
+                <td>-</td>
+                <td>09.06.2025</td>
+                <td>
+                  <a target="_blank" href="/img-cinebench/arima.png">Link</a>
+                </td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>1882</td>
+                <td>jade</td>
+                <td>Core i3 4160</td>
+                <td>40W@75°C</td>
+                <td class="table-notes">
+                  May be affected by Parsec (remote PC)
+                </td>
+                <td>06.04.2025</td>
+                <td>
+                  <a target="_blank" href="/img-cinebench/i3-mc.png"
+                    >Link</a
+                  >
+                  <br />
+                  <a target="_blank" href="https://youtu.be/muYby0S8P5E?t=562"
+                    >Baseline</a
+                  >
+                </td>
+              </tr>
+            </table>
+            <h3>Single thread</h3>
+            <table>
+              <tr>
+                <th>#</th>
+                <th>Score</th>
+                <th>User</th>
+                <th>CPU</th>
+                <th>Notes</th>
+                <th>Date</th>
+                <th>Screenshot</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>2224</td>
+                <td>ANightly</td>
+                <td>Ryzen 9 9700X</td>
+                <td class="table-notes">Completed 2 passes</td>
+                <td>06.04.2025</td>
+                <td>
+                  <a target="_blank" href="https://files.catbox.moe/68cow9.png"
+                    >Link</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>1734</td>
+                <td>amrls</td>
+                <td>Ryzen 7 8845HS</td>
+                <td class="table-notes">
+                  <b>Legion Slim 5 Gen 9 2024</b> (16AHP9); <br />
+                  Completed 2 passes; <br />
+                  30W@65°C
+                </td>
+                <td>06.04.2025</td>
+                <td>
+                  <a target="_blank" href="/img-cinebench/legion-sc.png"
+                    >Link</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>1526</td>
+                <td>ImSwordQueen</td>
+                <td>Ryzen 5 5600X</td>
+                <td>-</td>
+                <td>07.04.2025</td>
+                <td>
+                  <a target="_blank" href="https://files.catbox.moe/fyi22u.png"
+                    >Link</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>1300</td>
+                <td>Ardaninho</td>
+                <td>Ryzen 5 5600H</td>
+                <td class="table-notes">
+                  <b>IdeaPad Gaming 3</b> (15ACH6); <br /><b>Max. T:</b> 69°C
+                </td>
+                <td>08.06.2025</td>
+                <td>
+                  <a target="_blank" href="/img-cinebench/ardan-sc.png">Link</a>
+                </td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>1267</td>
+                <td>sealy</td>
+                <td>Ryzen 5 5500</td>
+                <td>-</td>
+                <td>09.06.2025</td>
+                <td>
+                  <a target="blank" href="/img-cinebench/sealy.png">Link</a>
+                </td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>1213</td>
+                <td>jade</td>
+                <td>Ryzen 7 4800H</td>
+                <td class="table-notes"><b>TUF A15 2020</b> (FA506IU)</td>
+                <td>06.04.2025</td>
+                <td>
+                  <a target="_blank" href="/img-cinebench/tuf-sc.png"
+                    >Link</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>1195</td>
+                <td>xodus</td>
+                <td>Core i5 10300H</td>
+                <td class="table-notes">
+                  <b>MSI GF63 Thin</b>; <br />
+                  enabled Turbo Mode in laptop BIOS; <br />
+                  <b>Max. T:</b> 70°C
+                </td>
+                <td>06.04.2025</td>
+                <td>
+                  <a target="_blank" href="https://files.catbox.moe/v6x9p7.png"
+                    >Link</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>855</td>
+                <td>jade</td>
+                <td>Core i3 4160</td>
+                <td class="table-notes">
+                  May be affected by Parsec (remote PC)
+                </td>
+                <td>06.04.2025</td>
+                <td>
+                  <a target="_blank" href="/img-cinebench/i3-sc.png"
+                    >Link</a
+                  >
+                  <br />
+                  <a target="_blank" href="https://youtu.be/muYby0S8P5E?t=562"
+                    >Baseline</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>847</td>
+                <td>Arima</td>
+                <td>Xeon E3-1220 v3</td>
+                <td>-</td>
+                <td>09.06.2025</td>
+                <td>
+                  <a target="_blank" href="/img-cinebench/arima.png">Link</a>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="footer">
+            <p>Site design is &copy 2025 amaryllidinae_</p>
+            <p>
+              Star us on
+              <a
+                target="_blank"
+                class="link"
+                href="https://github.com/raytek-cafe"
+                >GitHub</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="gap">&nbsp;</div>
+    </div>
+    <script src="../scripts/script.js"></script>
+  </body>
+</html>

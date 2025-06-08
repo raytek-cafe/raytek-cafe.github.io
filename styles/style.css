@@ -1,0 +1,301 @@
+/*
+     ________  __________  ______  __       _________
+    /_____  / / __  __  / / ____/ / /      / _______/
+   ______/ / / / / / / / / /     / /      / /______
+  /  __   / / / / / / / / /     / /      /_____   /
+ /  /_/  / / / / / / / / /     / /____  ______/  /
+/_______/ /_/ /_/ /_/ /_/     /______/ /________/
+
+     made by amrls
+     @amaryllidinae_
+
+*/
+
+/* ======================================================================================================  fonts */
+
+@font-face {
+  font-family: "Ruberoid";
+  src: url(fonts/Ruberoid-Regular.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Ruberoid";
+  font-weight: bold;
+  src: url(fonts/Ruberoid-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Ruberoid";
+  font-style: italic;
+  src: url(fonts/Ruberoid-Italic.ttf);
+}
+
+@font-face {
+  font-family: "Ruberoid";
+  font-weight: bold;
+  font-style: italic;
+  src: url(fonts/Ruberoid-BoldItalic.ttf);
+}
+
+@font-face {
+  font-family: "Ruberoid Light";
+  src: url(fonts/Ruberoid-Light.ttf);
+}
+
+@font-face {
+  font-family: "Ruberoid Light";
+  font-weight: bold;
+  src: url(fonts/Ruberoid-Bold.ttf);
+}
+
+/* ====================================================================================== color scheme variables */
+
+:root {
+  color-scheme: dark; /* Use dark color scheme */
+  --glow-color: red; /* Primary color for highlights */
+  --shadow-color: rgba(195, 0, 0, 0.5); /* Secondary color for shadows */
+  --link-color: #ff3636; /* Tertiary color for links */
+  --link-color-hover: #ff7878; /* Tertiary color for links on hover */
+  --page-color: #2c2c2c; /* Page background color */
+}
+
+.theme-blue {
+  --glow-color: #00e5ff;
+  --shadow-color: rgba(0, 121, 161, 0.5);
+  --link-color: #00e5ff;
+  --link-color-hover: #c6f1ff;
+  --page-color: #2c2c2c; /* Page background color */
+}
+
+.theme-green {
+  --glow-color: #00ff77;
+  --shadow-color: rgba(0, 146, 88, 0.5);
+  --link-color: #00ff77;
+  --link-color-hover: #d6ffe7;
+  --page-color: #2c2c2c; /* Page background color */
+}
+
+.theme-violet {
+  --glow-color: #b366ff;
+  --shadow-color: rgba(114, 0, 180, 0.5);
+  --link-color: #b366ff;
+  --link-color-hover: #e6c6ff;
+  --page-color: #2c2c2c; /* Page background color */
+}
+
+/* ================================================================================================= base styles */
+
+html,
+body {
+  margin: 0 auto; /* Get rid of default margin */
+  background-color: #191919; /* Dark background incase the image fails to load */
+  background-image: url(img/bg.png); /* Background image */
+  font-family: "Ruberoid", sans-serif; /* Use Ruberoid font and fallback to sans-serif */
+  font-size: 10pt; /* Base font size */
+  font-weight: normal; /* Normal font weight */
+  height: 100vh; /* Full viewport height */
+  overflow: auto; /* Allow scrolling if content overflows */
+}
+
+.container {
+  width: 45%; /* Set container width to 45% of the viewport */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  background-color: var(--page-color); /* Dark background for the container */
+  color: #ebebeb; /* Text color */
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 1), 0 0 150px var(--shadow-color); /* Shadow for depth */
+  border: 2px solid #464646; /* Border for the container */
+  outline: 3px solid #1c1c1c; /* Outline for the container */
+  min-height: 94vh; /* Minimum height to fill the viewport */
+  margin: 3vh auto; /* Center the container with vertical margin */
+  border-radius: 4px; /* Rounded corners */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack children vertically */
+}
+
+/* ======================================================================================================= links */
+
+a {
+  color: var(--link-color); /* Default link color */
+  text-decoration: none; /* Remove underline from links */
+}
+
+a:hover {
+  text-decoration: underline; /* Underline links on hover */
+  color: var(--link-color-hover); /* Change link color on hover */
+}
+
+/* =========================================================================================== responsive layout */
+
+@media (max-width: 1600px) {
+  .container {
+    width: 55%; /* Adjust container width for larger screens */
+  }
+}
+
+@media (max-width: 1050px) {
+  .container {
+    width: 70%; /* Adjust container width for smaller screens */
+  }
+}
+
+@media (max-width: 850px) {
+  .container {
+    width: 95%; /* Adjust container width for mobile devices */
+  }
+}
+
+/* ====================================================================================================== header */
+
+.header {
+  min-height: 175px; /* Set header height to at least 175px */
+  background: linear-gradient(to right, black 25%, rgba(255, 255, 255, 0) 70%),
+    url("img/header-bg.jpg") no-repeat center 35%; /* Background image with gradient */
+  background-size: cover; /* Cover the entire header area */
+  display: flex; /* Flexbox for centering content */
+  flex-direction: column; /* Order header content vertically */
+  justify-content: center; /* Center content vertically */
+  padding-left: 5%; /* Padding on the left */
+  text-shadow: 0 0 5px white, 0 0 40px white; /* Header text glow */
+  border-radius: 2px 2px 0 0; /* Rounded corners for the top of the header */
+}
+
+.title {
+  font-size: 2.125rem; /* Title font size (same as h1) */
+}
+
+.title a {
+  text-decoration: none; /* Remove underline from title link */
+  color: white; /* Default color for title link */
+  transition: text-shadow 0.3s; /* Smooth transition for hover effects */
+}
+
+.title a:hover {
+  text-shadow: 0 0 5px var(--glow-color), 0 0 10px var(--glow-color),
+    0 0 15px var(--glow-color), 0 0 40px var(--glow-color); /* Header text glow */
+}
+
+/* ============================================================================================== navigation bar */
+
+.navbar {
+  display: flex; /* Flexbox for navigation bar */
+  justify-content: center; /* Center navigation items */
+  align-items: center; /* Center items vertically */
+  background: linear-gradient(
+    to bottom,
+    #464646,
+    #000
+  ); /* Gradient background for navbar */
+  padding: 4px; /* Padding for the navbar */
+  position: sticky; /* Make navbar sticky */
+  top: 0; /* Stick to the top of the viewport */
+  border-top: 1px solid #6b6b6b; /* Border for navbar */
+  border-bottom: 1px solid #2c2c2c; /* Border for navbar */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Shadow for navbar */
+}
+
+.navbar a {
+  color: white; /* Text color for links */
+  text-decoration: none; /* Remove underline from links */
+  transition: background-color 0.3s, text-shadow 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+  padding: 8px 20px; /* Padding for links */
+  border-radius: 3px; /* Rounded corners for links */
+}
+
+.navbar a:hover {
+  /* Hover effect for links */
+  background-color: #070707; /* Light background on hover */
+  text-shadow: 0 0 5px var(--glow-color), 0 0 10px var(--glow-color),
+    0 0 20px var(--glow-color), 0 0 40px var(--glow-color); /* Red glow on text */
+  box-shadow: 0 0 0 1px #2d2d2d; /* Outline on button (shadow can be animated as opposed to border) */
+}
+
+#theme-toggle {
+  position: absolute; /* Position toggle button absolutely */
+  right: 8px; /* Right align toggle button */
+  background: transparent; /* Transparent background for toggle button */
+  border: none; /* No border for toggle button */
+  border-radius: 3px;
+  font-family: "Ruberoid", sans-serif; /* Use Ruberoid font for toggle button */
+  padding: 4px 4px; /* Padding for toggle button */
+  transition: background-color 0.3s, text-shadow 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+  border: 1px solid #6c6c6c; /* Border for toggle button */
+  outline: 1px solid #242424; /* Outline for toggle button */
+}
+
+#theme-toggle:hover {
+  background-color: #070707; /* Light background on hover */
+  text-shadow: 0 0 5px var(--glow-color), 0 0 10px var(--glow-color),
+    0 0 20px var(--glow-color), 0 0 40px var(--glow-color); /* Red glow on text */
+  box-shadow: 0 0 0 1px #2d2d2d; /* Outline on button (shadow can be animated as opposed to border) */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+#theme-toggle img {
+  width: 24px; /* Width for theme toggle icon */
+  vertical-align: middle; /* Align icon vertically in the middle */
+}
+
+/* ===================================================================================================== content */
+
+.content {
+  padding: 10px 5%; /* Padding for content area */
+  line-height: 1.8; /* Line height for readability */
+  box-shadow: inset 10px 0 20px -10px rgba(0, 0, 0, 0.5),
+    /* Left side */ inset -10px 0 20px -10px rgba(0, 0, 0, 0.5); /* Right side */
+  flex-grow: 1; /* Allow content to grow and fill available space */
+  padding-bottom: 5%; /* Padding at the bottom of content */
+}
+
+/* ====================================================================================================== tables */
+
+table {
+  width: 100%; /* Full width for tables */
+  border-collapse: collapse; /* Collapse borders */
+  font-size: 9pt; /* Font size for table text */
+  line-height: 1.6; /* Line height for table text */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Shadow for tables */
+  margin-bottom: 1%; /* Margin at the bottom of tables */
+}
+
+th,
+td {
+  border: 1px solid #727272; /* Border for table cells */
+  text-align: center; /* Left align text */
+  padding: 4px 6px; /* Padding for table cells */
+}
+
+tr:nth-child(odd) {
+  background-color: #343434; /* Dark background for odd table rows */
+}
+
+th {
+  font-weight: bold; /* Bold text for headers */
+  background: linear-gradient(
+    to bottom,
+    #353535,
+    #111
+  ); /* Dark background for headers */
+}
+
+.table-notes {
+  text-align: left; /* Left align text for notes */
+}
+
+/* ====================================================================================================== footer */
+
+.footer {
+  padding: 10px 5%; /* Padding for footer area */
+  border-top: 2px solid #464646; /* Top border for footer */
+  margin-top: auto; /* Push footer to the bottom of the container */
+  font-family: "Ruberoid Light", sans-serif; /* Use Ruberoid Light font for footer */
+  line-height: 1; /* Line height for footer */
+  text-align: center; /* Center footer text */
+  background: linear-gradient(to bottom, var(--page-color), #111111);
+  border-radius: 0 0 2px 2px; /* Rounded corners for the bottom of the footer */
+  box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.5); /* Subtle shadow for footer */
+}
+
+.footer a {
+  font-family: "Ruberoid", sans-serif; /* Regular font for footer links */
+}
