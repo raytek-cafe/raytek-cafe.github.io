@@ -129,26 +129,6 @@ a:hover {
   color: var(--link-color-hover); /* Change link color on hover */
 }
 
-/* =========================================================================================== responsive layout */
-
-@media (max-width: 1600px) {
-  .container {
-    width: 55%; /* Adjust container width for larger screens */
-  }
-}
-
-@media (max-width: 1050px) {
-  .container {
-    width: 70%; /* Adjust container width for smaller screens */
-  }
-}
-
-@media (max-width: 850px) {
-  .container {
-    width: 95%; /* Adjust container width for mobile devices */
-  }
-}
-
 /* ====================================================================================================== header */
 
 .header {
@@ -216,10 +196,10 @@ a:hover {
 
 #theme-toggle {
   position: absolute; /* Position toggle button absolutely */
-  right: 8px; /* Right align toggle button */
+  right: 5%; /* Right align toggle button */
   background: transparent; /* Transparent background for toggle button */
-  border: none; /* No border for toggle button */
-  border-radius: 3px;
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  border-radius: 3px; /* Rounded corners for toggle button */
   font-family: "Ruberoid", sans-serif; /* Use Ruberoid font for toggle button */
   padding: 4px 4px; /* Padding for toggle button */
   transition: background-color 0.3s, text-shadow 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
@@ -302,4 +282,38 @@ th {
 
 .footer a {
   font-family: "Ruberoid", sans-serif; /* Regular font for footer links */
+}
+
+/* =========================================================================================== responsive layout */
+
+@media (max-width: 1600px) {
+  .container {
+    width: 55%; /* Adjust container width for larger screens */
+  }
+}
+
+@media (max-width: 1050px) {
+  .container {
+    width: 70%; /* Adjust container width for smaller screens */
+  }
+}
+
+@media (max-width: 850px) {
+  .container {
+    width: 95%; /* Adjust container width for mobile devices */
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 98%; /* Full width for very small screens */
+  }
+  .navbar {
+    justify-content: initial; /* Stack navbar items vertically */
+    padding-left: 5%; /* Add padding to the left for smaller screens */ 
+  }
+
+  .navbar a {
+    padding: 8px 10px; /* Adjust padding for smaller screens */
+  }
 }
