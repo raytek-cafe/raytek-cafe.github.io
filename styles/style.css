@@ -311,13 +311,13 @@ th {
     width: 95%; /* Adjust container width for mobile devices */
   }
   table, tr, th, td {
-    font-size: 1.05vw
+    font-size: 1.15vw
   }
 }
 
 @media (max-width: 900px) {
   table, tr, th, td {
-    font-size: 1.2vw;
+    font-size: 1.3vw;
   }
 }
 
@@ -326,7 +326,7 @@ th {
   tr,
   th,
   td {
-    font-size: 1.3vw; /* Adjust font size for tables on smaller screens */
+    font-size: 1.5vw; /* Adjust font size for tables on smaller screens */
   }
 }
 
@@ -347,6 +347,7 @@ th {
   tr,
   th,
   td {
-    font-size: 1.5vw; /* Smaller font size for tables on small screens */
+    font-size: 1.7vw; /* Smaller font size for tables on small screens */
+    padding: 4px;
   }
 }
