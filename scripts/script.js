@@ -296,3 +296,24 @@ if (volumeSlider) {
     setVolumeProgress();
   });
 }
+
+// Restore audio progress from localStorage (if available)
+const savedAudioTime = parseFloat(localStorage.getItem("audioCurrentTime"));
+if (!isNaN(savedAudioTime)) {
+  audio.currentTime = savedAudioTime;
+}
+
+// Save audio progress to localStorage as the song plays
+audio.addEventListener("timeupdate", () => {
+  localStorage.setItem("audioCurrentTime", audio.currentTime);
+  seekbar.value = (audio.currentTime / audio.duration) * 100 || 0;
+  // Also update the CSS variable for progress colorization
+  const percent = (seekbar.value / seekbar.max) * 100;
+  seekbar.style.setProperty("--seekbar-progress", percent + "%");
+});
+
+// Optional: Clear progress when song ends
+audio.addEventListener("ended", () => {
+  playPause.textContent = "⏵";
+  localStorage.removeItem("audioCurrentTime");
+});
