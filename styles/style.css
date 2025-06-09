@@ -279,7 +279,8 @@ p,
 a,
 li,
 .subtitle,
-.content {
+table,
+button {
   opacity: 0; /* Start with subtitle hidden */
   animation: fadeIn 1s cubic-bezier(0.4, 0, 0.2, 1) forwards; /* Fade in animation */
 }
