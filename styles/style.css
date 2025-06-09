@@ -65,7 +65,39 @@
   --page-color: #2c2c2c; /* Page background color */
 }
 
-.theme-aquamarine {
+.theme-orange {
+  --glow-color: #ff9f00; /* Primary color for highlights */
+  --shadow-color: rgba(180, 90, 0, 0.5); /* Secondary color for shadows */
+  --link-color: #ff9f00; /* Tertiary color for links */
+  --link-color-hover: #ffc551; /* Tertiary color for links on hover */
+  --page-color: #2c2c2c; /* Page background color */
+}
+
+.theme-yellow {
+  --glow-color: #ffea00; /* Primary color for highlights */
+  --shadow-color: rgba(180, 150, 0, 0.5); /* Secondary color for shadows */
+  --link-color: #ffea00; /* Tertiary color for links */
+  --link-color-hover: #fff59b; /* Tertiary color for links on hover */
+  --page-color: #2c2c2c; /* Page background color */
+}
+
+.theme-lime {
+  --glow-color: #96d700; /* Primary color for highlights */
+  --shadow-color: rgba(58, 184, 0, 0.5); /* Secondary color for shadows */
+  --link-color: #96d700; /* Tertiary color for links */
+  --link-color-hover: #d6ff7a; /* Tertiary color for links on hover */
+  --page-color: #2c2c2c; /* Page background color */
+}
+
+.theme-mint {
+  --glow-color: #42ff9a;
+  --shadow-color: rgba(0, 146, 88, 0.5);
+  --link-color: #42ff9a;
+  --link-color-hover: #d6ffe7;
+  --page-color: #2c2c2c; /* Page background color */
+}
+
+.theme-cyan {
   --glow-color: #85f3ff;
   --shadow-color: rgba(0, 121, 161, 0.5);
   --link-color: #85f3ff;
@@ -81,35 +113,11 @@
   --page-color: #2c2c2c; /* Page background color */
 }
 
-.theme-green {
-  --glow-color: #42ff9a;
-  --shadow-color: rgba(0, 146, 88, 0.5);
-  --link-color: #42ff9a;
-  --link-color-hover: #d6ffe7;
-  --page-color: #2c2c2c; /* Page background color */
-}
-
 .theme-violet {
   --glow-color: #b366ff;
   --shadow-color: rgba(114, 0, 180, 0.5);
   --link-color: #b366ff;
   --link-color-hover: #e1b9ff;
-  --page-color: #2c2c2c; /* Page background color */
-}
-
-.theme-orange {
-  --glow-color: #ff9f00; /* Primary color for highlights */
-  --shadow-color: rgba(180, 90, 0, 0.5); /* Secondary color for shadows */
-  --link-color: #ff9f00; /* Tertiary color for links */
-  --link-color-hover: #ffc551; /* Tertiary color for links on hover */
-  --page-color: #2c2c2c; /* Page background color */
-}
-
-.theme-yellow {
-  --glow-color: #ffea00; /* Primary color for highlights */
-  --shadow-color: rgba(180, 150, 0, 0.5); /* Secondary color for shadows */
-  --link-color: #ffea00; /* Tertiary color for links */
-  --link-color-hover: #fff59b; /* Tertiary color for links on hover */
   --page-color: #2c2c2c; /* Page background color */
 }
 
@@ -197,7 +205,7 @@ a:hover {
   right: 0;
   min-width: 70%;
   min-height: 100%;
-  user-select: none; /* Prevent text selection */;
+  user-select: none; /* Prevent text selection */
 }
 
 .title {
