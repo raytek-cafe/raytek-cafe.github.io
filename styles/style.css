@@ -177,7 +177,7 @@ li,
 table,
 button {
   opacity: 0; /* Start with items hidden */
-  animation: fadeIn 1s cubic-bezier(0.4, 0, 0.2, 1) forwards; /* Fade in animation */
+  animation: fadeIn 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards; /* Fade in animation */
 }
 
 @keyframes fadeIn {
