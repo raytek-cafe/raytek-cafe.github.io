@@ -311,6 +311,7 @@ button {
   border-top: 1px solid #6b6b6b; /* Border for navbar */
   border-bottom: 1px solid #2c2c2c; /* Border for navbar */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Shadow for navbar */
+  z-index: 1000; /* Ensure navbar is above other content */
 }
 
 .navbar a {
