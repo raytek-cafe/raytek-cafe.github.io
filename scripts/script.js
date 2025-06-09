@@ -210,3 +210,89 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+// ============================================================= Audio Player
+const audio = document.getElementById("audio");
+const playPause = document.getElementById("play-pause");
+const seekbar = document.getElementById("seekbar");
+
+// Play/Pause toggle
+playPause.addEventListener("click", () => {
+  if (audio.paused) {
+    audio.play();
+    playPause.textContent = "⏸";
+  } else {
+    audio.pause();
+    playPause.textContent = "⏵";
+  }
+});
+
+// Update seekbar as audio plays
+audio.addEventListener("timeupdate", () => {
+  seekbar.value = (audio.currentTime / audio.duration) * 100 || 0;
+});
+
+// Seek when user drags seekbar
+seekbar.addEventListener("input", () => {
+  audio.currentTime = (seekbar.value / 100) * audio.duration;
+});
+
+// Get the volume slider element
+const volumeSlider = document.getElementById("volume-slider");
+
+// Set initial volume (optional, 0.5 = 50%)
+if (volumeSlider) {
+  audio.volume = volumeSlider.value / 100;
+
+  // Update audio volume when slider changes
+  volumeSlider.addEventListener("input", () => {
+    audio.volume = volumeSlider.value / 100;
+  });
+}
+
+// Set initial volume (0.3 = 30%)
+if (volumeSlider) {
+  audio.volume = 0.3;
+  volumeSlider.value = 30;
+
+  // Update audio volume when slider changes
+  volumeSlider.addEventListener("input", () => {
+    audio.volume = volumeSlider.value / 100;
+  });
+}
+
+// Reset button text when audio ends
+audio.addEventListener("ended", () => {
+  playPause.textContent = "⏵";
+});
+
+seekbar.addEventListener("input", function () {
+  const percent = (seekbar.value / seekbar.max) * 100;
+  seekbar.style.setProperty("--seekbar-progress", percent + "%");
+});
+// Set initial value on page load
+seekbar.dispatchEvent(new Event("input"));
+
+// Update seekbar as audio plays
+audio.addEventListener("timeupdate", () => {
+  seekbar.value = (audio.currentTime / audio.duration) * 100 || 0;
+
+  // Also update the CSS variable for progress colorization
+  const percent = (seekbar.value / seekbar.max) * 100;
+  seekbar.style.setProperty("--seekbar-progress", percent + "%");
+});
+
+if (volumeSlider) {
+  // Set initial value
+  const setVolumeProgress = () => {
+    const percent = (volumeSlider.value / volumeSlider.max) * 100;
+    volumeSlider.style.setProperty("--volume-progress", percent + "%");
+  };
+  setVolumeProgress();
+
+  // Update on input
+  volumeSlider.addEventListener("input", () => {
+    audio.volume = volumeSlider.value / 100;
+    setVolumeProgress();
+  });
+}

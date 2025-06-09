@@ -175,7 +175,8 @@ a,
 li,
 .subtitle,
 table,
-button {
+button,
+.player {
   opacity: 0; /* Start with items hidden */
   animation: fadeIn 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards; /* Fade in animation */
 }
@@ -354,6 +355,137 @@ a:hover {
   vertical-align: middle; /* Align icon vertically in the middle */
 }
 
+/* ====================================================================================================== player */
+
+.player {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #1d1d1d;
+  border-bottom: 1px solid #2c2c2c;
+  padding: 0px 40px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); /* Shadow for navbar */
+  position: sticky;
+  top: 43px;
+  z-index: 1001;
+}
+
+#play-pause {
+  background: linear-gradient(#4e4e4e, #181818);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-family: "Ruberoid Light", sans-serif;
+  min-width: 30px;
+  border-radius: 2px;
+}
+#seekbar {
+  appearance: none;
+  flex: 1;
+  accent-color: var(--link-color); /* For modern browsers */
+  background-color: #424242;
+  height: 2px;
+  margin: 0px;
+  border: 12px solid #1d1d1d;
+}
+
+#volume-slider {
+  appearance: none;
+  width: 80px;
+  accent-color: var(--link-color); /* For modern browsers */
+  background-color: #424242;
+  height: 2px;
+  margin: 0px;
+  border: 12px solid #1d1d1d;
+}
+
+/* Track background for Chrome, Edge, Safari */
+#seekbar::-webkit-slider-runnable-track {
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    var(--link-color) 0%,
+    var(--link-color) calc(var(--seekbar-progress, 0%)),
+    #424242 calc(var(--seekbar-progress, 0%)),
+    #424242 100%
+  );
+}
+
+/* Volume slider background for Chrome, Edge, Safari */
+#volume-slider::-webkit-slider-runnable-track {
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    var(--link-color) 0%,
+    var(--link-color) calc(var(--volume-progress, 0%)),
+    #424242 calc(var(--volume-progress, 0%)),
+    #424242 100%
+  );
+}
+
+/* Seekbar thumb for Chrome, Edge, Safari */
+#seekbar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 4px;
+  height: 13px;
+  border-radius: 0%;
+  background: var(--link-color);
+  border: 1px solid #2d2d2d;
+  cursor: pointer;
+  box-shadow: 0 0 4px var(--link-color);
+  margin-top: -5.5px;
+}
+
+/* Volume slider thumb for Chrome, Edge, Safari */
+#volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 4px;
+  height: 13px;
+  border-radius: 0%;
+  background: var(--link-color);
+  border: 1px solid #2d2d2d;
+  cursor: pointer;
+  box-shadow: 0 0 4px var(--link-color);
+  margin-top: -5.5px;
+}
+
+/* Track background for Firefox */
+#seekbar::-moz-range-track {
+  background: #424242;
+}
+#seekbar::-moz-range-progress {
+  background: var(--link-color);
+}
+
+/* Volume slider background for Firefox */
+#volume-slider::-moz-range-track {
+  background: #424242;
+}
+#volume-slider::-moz-range-progress {
+  background: var(--link-color);
+}
+
+/* Seekbar thumb for Firefox */
+#seekbar::-moz-range-thumb {
+  width: 4px;
+  height: 13px;
+  border-radius: 0%;
+  background: var(--link-color);
+  border: 1px solid #2d2d2d;
+  cursor: pointer;
+  box-shadow: 0 0 4px var(--link-color);
+}
+
+/* Volume slider thumb for Firefox */
+#volume-slider::-moz-range-thumb {
+  width: 4px;
+  height: 13px;
+  border-radius: 0%;
+  background: var(--link-color);
+  border: 1px solid #2d2d2d;
+  cursor: pointer;
+  box-shadow: 0 0 4px var(--link-color);
+}
 /* ===================================================================================================== content */
 
 .content {
