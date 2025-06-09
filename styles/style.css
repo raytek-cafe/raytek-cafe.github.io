@@ -361,8 +361,8 @@ a:hover {
 
 .player {
   display: flex;
+  gap: 20px;
   align-items: center;
-  gap: 10px;
   background: #1d1d1d;
   border-bottom: 1px solid #2c2c2c;
   padding: 0px 40px;
@@ -389,7 +389,8 @@ a:hover {
   background-color: #424242;
   height: 2px;
   margin: 0px;
-  border: 12px solid #1d1d1d;
+  border-top: 12px solid #1d1d1d;
+  border-bottom: 12px solid #1d1d1d;
 }
 
 #volume-slider {
@@ -399,7 +400,8 @@ a:hover {
   background-color: #424242;
   height: 2px;
   margin: 0px;
-  border: 12px solid #1d1d1d;
+  border-top: 12px solid #1d1d1d;
+  border-bottom: 12px solid #1d1d1d;
 }
 
 /* Track background for Chrome, Edge, Safari */
@@ -573,6 +575,11 @@ th {
 
   #theme-toggle {
     right: 10px; /* Adjust position for smaller screens */
+  }
+
+  .player {
+    padding: 0px 20px;
+    gap: 10px;
   }
 
   table,
