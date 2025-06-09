@@ -204,7 +204,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (clickCount === 10) {
       // If clicked 10 times
       currentImage = (currentImage + 1) % images.length; // Cycle to next image
-      header.style.background = `linear-gradient(to right, black 200px, transparent 70%), url("${images[currentImage]}") no-repeat center 35%`; // Set header background
+      header.style.background = `linear-gradient(to right, #0a0a0a 200px, transparent 70%), url("${images[currentImage]}") no-repeat center 35%`; // Set header background
       header.style.backgroundSize = "cover"; // Ensure the background covers the header
       clickCount = 0; // Reset click count after changing the image
     }
