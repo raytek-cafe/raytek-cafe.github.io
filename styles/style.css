@@ -269,7 +269,6 @@ a:hover {
     0 0 15px var(--glow-color), 0 0 40px var(--glow-color); /* Header text glow */
 }
 
-/*
 h1,
 h2,
 h3,
@@ -282,10 +281,9 @@ li,
 .subtitle,
 table,
 button {
-  opacity: 0; /* Start with subtitle hidden 
-  animation: fadeIn 1s cubic-bezier(0.4, 0, 0.2, 1) forwards; /* Fade in animation
+  opacity: 0; /* Start with subtitle hidden */
+  animation: fadeIn 1s cubic-bezier(0.4, 0, 0.2, 1) forwards; /* Fade in animation */
 }
-*/
 
 @keyframes fadeIn {
   from {
