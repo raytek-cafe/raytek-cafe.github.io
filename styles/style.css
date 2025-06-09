@@ -170,11 +170,11 @@
 /* ================================================================================================== animations */
 
 .page {
-  transition: box-shadow 0.5s linear;
+  transition: box-shadow 0.5s;
 }
 
 a {
-  transition: color 0.3s linear;
+  transition: color 0.3s;
 }
 
 /* ================================================================================================= base styles */
@@ -226,8 +226,8 @@ a {
 }
 
 a:hover {
-  text-decoration: underline; /* Underline links on hover */
   color: var(--link-color-hover); /* Change link color on hover */
+  text-decoration: underline; /* Underline links on hover */
 }
 
 /* ====================================================================================================== header */
@@ -271,10 +271,10 @@ a:hover {
 
 .subtitle {
   opacity: 0; /* Start with subtitle hidden */
-  animation: fadeIn 0.7s cubic-bezier(.4,0,.2,1) forwards; /* Fade in animation */
+  animation: fadeIn 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards; /* Fade in animation */
 }
 
-@keyframes fadeIn { 
+@keyframes fadeIn {
   from {
     opacity: 0; /* Start with opacity 0 */
   }
