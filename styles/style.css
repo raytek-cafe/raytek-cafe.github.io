@@ -380,6 +380,7 @@ a:hover {
   font-family: "Ruberoid Light", sans-serif;
   min-width: 30px;
   border-radius: 2px;
+  outline: 1px solid #424242;
 }
 #seekbar {
   appearance: none;
