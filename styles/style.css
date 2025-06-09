@@ -181,6 +181,9 @@ a:hover {
 
 .header {
   min-height: 175px; /* Set header height to at least 175px */
+  background: linear-gradient(to right, black 200px, transparent 70%),
+    url("img/header-bg.jpg") no-repeat center 35%; /* Background image with gradient */
+  background-size: cover; /* Cover the entire header area */
   display: flex; /* Flexbox for centering content */
   flex-direction: column; /* Order header content vertically */
   justify-content: center; /* Center content vertically */

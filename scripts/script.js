@@ -62,10 +62,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // Load persisted image index or default to 0
   let currentImage = parseInt(localStorage.getItem("headerImageIndex")) || 0;
 
-  // Set initial background on page load
-  header.style.background = `linear-gradient(to right, black 200px, transparent 70%), url("${images[currentImage]}") no-repeat center 35%`;
-  header.style.backgroundSize = "cover"; // Ensure the background covers the header
-
   header.addEventListener("click", function () {
     clickCount++;
     if (clickCount === 10) {
