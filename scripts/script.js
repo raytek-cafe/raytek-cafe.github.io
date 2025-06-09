@@ -295,6 +295,18 @@ if (volumeSlider) {
     audio.volume = volumeSlider.value / 100;
     setVolumeProgress();
   });
+
+  // Allow scrolling on the volume slider to change volume
+  volumeSlider.addEventListener("wheel", (e) => {
+    e.preventDefault();
+    // Change by 2 units per scroll (adjust as needed)
+    let newValue = parseInt(volumeSlider.value, 10) + (e.deltaY < 0 ? 5 : -5);
+    newValue = Math.max(0, Math.min(100, newValue));
+    volumeSlider.value = newValue;
+    audio.volume = newValue / 100;
+    localStorage.setItem("audioVolume", audio.volume);
+    setVolumeProgress();
+  });
 }
 
 // Restore audio progress from localStorage (if available)
