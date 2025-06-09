@@ -561,8 +561,8 @@ th {
     padding: 0 2%; /* Reduce padding for smaller screens */
   }
 
-  .content {
-    padding: 0px 20px 20px; /* Reduce padding for smaller screens */
+  .header {
+    padding-left: 20px; /* Reduce padding for smaller screens */
   }
 
   .navbar {
@@ -580,6 +580,10 @@ th {
 
   .player {
     padding: 0px 20px;
+  }
+
+  .content {
+    padding: 0px 20px 20px; /* Reduce padding for smaller screens */
   }
 
   table,
