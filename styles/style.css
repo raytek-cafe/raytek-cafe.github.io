@@ -67,30 +67,30 @@
 }
 
 .theme-orange {
-  --glow-color: #ff9f00; /* Primary color for highlights */
-  --shadow-color: rgba(180, 90, 0, 0.3); /* Secondary color for shadows */
-  --secondary-shadow-color: rgba(180, 90, 0, 0.2); /* Secondary shadow color */
-  --link-color: #ff9f00; /* Tertiary color for links */
-  --link-color-hover: #ffc551; /* Tertiary color for links on hover */
-  --page-color: #2c2c2c; /* Page background color */
+  --glow-color: #ff9f00;
+  --shadow-color: rgba(180, 90, 0, 0.3);
+  --secondary-shadow-color: rgba(180, 90, 0, 0.2);
+  --link-color: #ff9f00;
+  --link-color-hover: #ffc551;
+  --page-color: #2c2c2c;
 }
 
 .theme-yellow {
-  --glow-color: #ffea00; /* Primary color for highlights */
-  --shadow-color: rgba(180, 150, 0, 0.3); /* Secondary color for shadows */
-  --secondary-shadow-color: rgba(180, 150, 0, 0.2); /* Secondary shadow color */
-  --link-color: #ffea00; /* Tertiary color for links */
-  --link-color-hover: #fff59b; /* Tertiary color for links on hover */
-  --page-color: #2c2c2c; /* Page background color */
+  --glow-color: #ffea00;
+  --shadow-color: rgba(180, 150, 0, 0.3);
+  --secondary-shadow-color: rgba(180, 150, 0, 0.2);
+  --link-color: #ffea00;
+  --link-color-hover: #fff59b;
+  --page-color: #2c2c2c;
 }
 
 .theme-lime {
-  --glow-color: #96d700; /* Primary color for highlights */
-  --shadow-color: rgba(58, 184, 0, 0.3); /* Secondary color for shadows */
-  --secondary-shadow-color: rgba(58, 184, 0, 0.2); /* Secondary shadow color */
-  --link-color: #96d700; /* Tertiary color for links */
-  --link-color-hover: #d6ff7a; /* Tertiary color for links on hover */
-  --page-color: #2c2c2c; /* Page background color */
+  --glow-color: #96d700;
+  --shadow-color: rgba(58, 184, 0, 0.3);
+  --secondary-shadow-color: rgba(58, 184, 0, 0.2);
+  --link-color: #96d700;
+  --link-color-hover: #d6ff7a;
+  --page-color: #2c2c2c;
 }
 
 .theme-mint {
@@ -99,7 +99,7 @@
   --secondary-shadow-color: rgba(0, 146, 88, 0.2);
   --link-color: #42ff9a;
   --link-color-hover: #d6ffe7;
-  --page-color: #2c2c2c; /* Page background color */
+  --page-color: #2c2c2c;
 }
 
 .theme-cyan {
@@ -108,16 +108,16 @@
   --secondary-shadow-color: rgba(0, 121, 161, 0.2);
   --link-color: #85f3ff;
   --link-color-hover: #d7f5ff;
-  --page-color: #2c2c2c; /* Page background color */
+  --page-color: #2c2c2c;
 }
 
 .theme-blue {
-  --glow-color: #478eff; /* Primary color for highlights */
-  --shadow-color: rgba(0, 68, 255, 0.3); /* Secondary color for shadows */
-  --secondary-shadow-color: rgba(0, 68, 255, 0.2); /* Secondary shadow color */
-  --link-color: #478eff; /* Tertiary color for links */
-  --link-color-hover: #9cc0ff; /* Tertiary color for links on hover */
-  --page-color: #2c2c2c; /* Page background color */
+  --glow-color: #478eff;
+  --shadow-color: rgba(0, 68, 255, 0.3);
+  --secondary-shadow-color: rgba(0, 68, 255, 0.2);
+  --link-color: #478eff;
+  --link-color-hover: #9cc0ff;
+  --page-color: #2c2c2c;
 }
 
 .theme-violet {
@@ -126,30 +126,25 @@
   --secondary-shadow-color: rgba(114, 0, 180, 0.2);
   --link-color: #b366ff;
   --link-color-hover: #e1b9ff;
-  --page-color: #2c2c2c; /* Page background color */
+  --page-color: #2c2c2c;
 }
 
 .theme-pink {
-  --glow-color: #ff4dca; /* Primary color for highlights */
-  --shadow-color: rgba(180, 0, 90, 0.3); /* Secondary color for shadows */
-  --secondary-shadow-color: rgba(180, 0, 90, 0.2); /* Secondary shadow color */
-  --link-color: #ff4dca; /* Tertiary color for links */
-  --link-color-hover: #ff97de; /* Tertiary color for links on hover */
-  --page-color: #2c2c2c; /* Page background color */
+  --glow-color: #ff4dca;
+  --shadow-color: rgba(180, 0, 90, 0.3);
+  --secondary-shadow-color: rgba(180, 0, 90, 0.2);
+  --link-color: #ff4dca;
+  --link-color-hover: #ff97de;
+  --page-color: #2c2c2c;
 }
 
 .theme-gray {
-  --glow-color: #ababab; /* Primary color for highlights */
-  --shadow-color: rgba(159, 159, 159, 0.3); /* Secondary color for shadows */
-  --secondary-shadow-color: rgba(
-    159,
-    159,
-    159,
-    0.2
-  ); /* Secondary shadow color */
-  --link-color: #ababab; /* Tertiary color for links */
-  --link-color-hover: #cacaca; /* Tertiary color for links on hover */
-  --page-color: #2c2c2c; /* Page background color */
+  --glow-color: #ababab;
+  --shadow-color: rgba(159, 159, 159, 0.3);
+  --secondary-shadow-color: rgba(159, 159, 159, 0.2);
+  --link-color: #ababab;
+  --link-color-hover: #cacaca;
+  --page-color: #2c2c2c;
 }
 
 /* =============================================================================================== rainbow theme */
@@ -168,6 +163,31 @@
 }
 
 /* ================================================================================================== animations */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+li,
+.subtitle,
+table,
+button {
+  opacity: 0; /* Start with items hidden */
+  animation: fadeIn 1s cubic-bezier(0.4, 0, 0.2, 1) forwards; /* Fade in animation */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Start with opacity 0 */
+  }
+  to {
+    opacity: 1; /* End with opacity 1 */
+  }
+}
 
 .page {
   transition: box-shadow 0.5s;
@@ -193,17 +213,18 @@ body {
 }
 
 .page-container {
+  /* Container for the page itself so we can add a static shadow */
   box-shadow: 0 0 75px var(--secondary-shadow-color); /* Shadow for depth */
-  max-width: 850px;
+  max-width: 850px; /* Set max container width to 850px */
   margin: 0 auto; /* Center the container horizontally */
 }
 
 .page {
-  max-width: 850px; /* Set max container width to 800px */
+  max-width: 850px; /* Set max page width to 850px */
   box-sizing: border-box; /* Include padding and border in element's total width and height */
   background-color: var(--page-color); /* Dark background for the container */
   color: var(--text-color); /* Text color */
-  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.5), 0px 0px 100px var(--shadow-color); /* Shadow for depth */
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.5), 0px 0px 100px var(--shadow-color); /* Dynamic shadow for depth */
   border: 2px solid #464646; /* Border for the container */
   outline: 3px solid #1c1c1c; /* Outline for the container */
   margin: 0 auto; /* Center the container horizontally */
@@ -247,10 +268,11 @@ a:hover {
 }
 
 .header-right {
+  /* Clickable transparent area for JS to detect clicks */
   position: absolute; /* Position header right content absolutely */
-  right: 0;
-  min-width: 70%;
-  min-height: 100%;
+  right: 0; /* Align to the right */
+  min-width: 70%; /* Minimum width for header right content */
+  min-height: 100%; /* Minimum height for header right content */
   user-select: none; /* Prevent text selection */
 }
 
@@ -267,31 +289,6 @@ a:hover {
 .title a:hover {
   text-shadow: 0 0 5px var(--glow-color), 0 0 10px var(--glow-color),
     0 0 15px var(--glow-color), 0 0 40px var(--glow-color); /* Header text glow */
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-a,
-li,
-.subtitle,
-table,
-button {
-  opacity: 0; /* Start with subtitle hidden */
-  animation: fadeIn 1s cubic-bezier(0.4, 0, 0.2, 1) forwards; /* Fade in animation */
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0; /* Start with opacity 0 */
-  }
-  to {
-    opacity: 1; /* End with opacity 1 */
-  }
 }
 
 /* ============================================================================================== navigation bar */
@@ -447,8 +444,8 @@ th {
   tr,
   th,
   td {
-    padding: 4px;
+    padding: 4px; /* Reduce padding for smaller screens */
     font-size: clamp(6px, 1.5vw, 9pt); /* Responsive font size for tables */
-    overflow-x: auto;
+    overflow-x: auto; /* Allow horizontal scrolling for tables */
   }
 }
