@@ -119,18 +119,39 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     setRandomSubtitle(); // Set initial subtitle
 
-    // Click handler for toggling subtitle sets
+    // --- Long press detection for meme mode ---
+    let pressTimer = null; // Timer for long press detection
+    let longPressTriggered = false; // Flag to track if long press was triggered
+
+    subtitle.addEventListener("mousedown", function () {
+      longPressTriggered = false; // Reset flag on new press
+      pressTimer = setTimeout(() => {
+        // Long press detected
+        longPressTriggered = true;
+        mode = 2; // Meme mode
+        localStorage.setItem("subtitleMode", mode);
+        subtitles = [normalSubtitles, altSubtitles, memeSubtitles][mode];
+        setRandomSubtitle();
+      }, 600);
+    });
+    subtitle.addEventListener("mouseup", function () {
+      clearTimeout(pressTimer);
+    });
+    subtitle.addEventListener("mouseleave", function () {
+      clearTimeout(pressTimer);
+    });
+
+    // Click handler for toggling subtitle sets (normal/alt)
     subtitle.addEventListener("click", function (e) {
-      if (e.ctrlKey) {
-        // Meme mode if Ctrl is held
-        mode = 2;
-      } else {
-        // Toggle between normal and alt
-        mode = mode === 1 ? 0 : 1;
+      if (longPressTriggered) {
+        // If long press was triggered, skip normal click logic
+        return;
       }
-      localStorage.setItem("subtitleMode", mode); // Persist mode
-      subtitles = [normalSubtitles, altSubtitles, memeSubtitles][mode]; // Update current set
-      setRandomSubtitle(); // Set new random subtitle
+      // Toggle between normal and alt
+      mode = mode === 1 ? 0 : 1;
+      localStorage.setItem("subtitleMode", mode);
+      subtitles = [normalSubtitles, altSubtitles, memeSubtitles][mode];
+      setRandomSubtitle();
     });
   });
 });
