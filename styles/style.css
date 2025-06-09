@@ -152,6 +152,8 @@
   --page-color: #2c2c2c; /* Page background color */
 }
 
+/* =============================================================================================== rainbow theme */
+
 .rainbow-theme {
   animation: hue-rainbow 3s linear infinite;
 }
@@ -165,12 +167,14 @@
   }
 }
 
+/* ================================================================================================== animations */
+
 .page {
   transition: box-shadow 0.5s linear;
 }
 
 a {
-  transition: color 0.5s linear;
+  transition: color 0.3s linear;
 }
 
 /* ================================================================================================= base styles */
@@ -263,6 +267,20 @@ a:hover {
 .title a:hover {
   text-shadow: 0 0 5px var(--glow-color), 0 0 10px var(--glow-color),
     0 0 15px var(--glow-color), 0 0 40px var(--glow-color); /* Header text glow */
+}
+
+.subtitle {
+  opacity: 0; /* Start with subtitle hidden */
+  animation: fadeIn 0.7s cubic-bezier(.4,0,.2,1) forwards; /* Fade in animation */
+}
+
+@keyframes fadeIn { 
+  from {
+    opacity: 0; /* Start with opacity 0 */
+  }
+  to {
+    opacity: 1; /* End with opacity 1 */
+  }
 }
 
 /* ============================================================================================== navigation bar */

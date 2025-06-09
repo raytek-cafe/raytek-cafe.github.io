@@ -29,61 +29,54 @@ function setTheme(idx) {
 const savedTheme = localStorage.getItem("theme") || "theme-red"; // Default to "theme-red" if no theme is saved
 setTheme(themes.indexOf(savedTheme)); // Set the theme based on the saved theme
 
-// Theme toggle button logic
+// ====================================== Theme toggle button logic with rainbow mode activation and animated theme variables ============== //
 document.addEventListener("DOMContentLoaded", function () {
+  // Ensure the DOM is fully loaded before executing this code
   const toggleBtn = document.getElementById("theme-toggle"); // Get the theme toggle button by its ID
   if (toggleBtn) {
     // Check if the toggle button exists
-    toggleBtn.onclick = function () {
-      // Attach a click event listener to the toggle button
-      let idx = getCurrentThemeIndex(); // Get the current theme index
-      idx = (idx + 1) % themes.length; // Increment the index and wrap around if it exceeds the number of themes
-      setTheme(idx); // Set the new theme based on the updated index
-    };
-  }
-});
-
-// Theme toggle button logic with rainbow mode activation and animated theme variables
-document.addEventListener("DOMContentLoaded", function () {
-  const toggleBtn = document.getElementById("theme-toggle"); // Get the theme toggle button by its ID
-  if (toggleBtn) {
     let clickTimes = []; // Array to store timestamps of recent clicks
     let rainbowActive = false; // Track if rainbow mode is active
     let rainbowTimeout = null; // Timeout for rainbow mode
 
     function activateRainbowMode() {
-      if (rainbowActive) return;
-      rainbowActive = true;
+      // Function to activate rainbow mode
+      if (rainbowActive) return; // If rainbow mode is already active, do nothing
+      rainbowActive = true; // Set rainbow mode to active
       document.body.classList.add("rainbow-theme"); // Add rainbow-theme to body
       rainbowTimeout = setTimeout(() => {
+        // Set a timeout to remove rainbow mode after 30 seconds
         document.body.classList.remove("rainbow-theme"); // Remove after 5 seconds
-        rainbowActive = false;
-      }, 30000);
+        rainbowActive = false; // Set rainbow mode to inactive
+      }, 30000); // 30 seconds
     }
 
     toggleBtn.onclick = function () {
-      const now = Date.now();
-      clickTimes.push(now);
+      // Attach a click event listener to the toggle button
+      const now = Date.now(); // Get the current timestamp
+      clickTimes.push(now); // Add the current timestamp to the clickTimes array
       // Keep only clicks in the last 1.2 seconds
-      clickTimes = clickTimes.filter((t) => now - t < 1200);
+      clickTimes = clickTimes.filter((t) => now - t < 1200); // Filter out clicks older than 1.2 seconds
 
       // If 7 or more clicks in 1.2 seconds, activate rainbow mode
       if (clickTimes.length >= 7) {
-        activateRainbowMode();
-        clickTimes = [];
-        return;
+        // If there are 7 or more clicks in the last 1.2 seconds
+        activateRainbowMode(); // Activate rainbow mode
+        clickTimes = []; // Reset clickTimes to prevent repeated activation
+        return; // Exit the function to prevent normal theme change
       }
 
       if (!rainbowActive) {
-        let idx = getCurrentThemeIndex();
-        idx = (idx + 1) % themes.length;
-        setTheme(idx);
+        // If rainbow mode is not active, proceed with normal theme change
+        let idx = getCurrentThemeIndex(); // Get the current theme index
+        idx = (idx + 1) % themes.length; // Increment the index and wrap around if it exceeds the number of themes
+        setTheme(idx); // Set the new theme based on the updated index
       }
     };
   }
 });
 
-// Subtitle randomizer and toggler with persistence, loading subtitles from external files
+// ============================= Subtitle randomizer and toggler with persistence, loading subtitles from external files ============== //
 document.addEventListener("DOMContentLoaded", function () {
   const subtitle = document.querySelector(".subtitle"); // Get the subtitle element
   if (!subtitle) return; // Exit if subtitle element does not exist
@@ -141,6 +134,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+// ======================================================================================= Header Background Image Changer ============== //
+// This script changes the header background image after 10 clicks on the header-right element.
 
 // Get the current script's directory for relative image paths
 const scriptPath = document.currentScript.src; // Get the path of the currently executing script
