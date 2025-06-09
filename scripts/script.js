@@ -155,6 +155,7 @@ document.addEventListener("DOMContentLoaded", function () {
     scriptDir + "../styles/img/header-bg.jpg", // original image
     scriptDir + "../styles/img/header-bg-alt1.jpg", // alternative 1
     scriptDir + "../styles/img/header-bg-alt2.jpg", // alternative 2
+    scriptDir + "../styles/img/header-bg-alt3.jpg", // alternative 3
   ];
 
   let currentImage = 0; // Always start from the first image on refresh
