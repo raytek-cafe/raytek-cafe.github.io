@@ -317,3 +317,22 @@ audio.addEventListener("ended", () => {
   playPause.textContent = "⏵";
   localStorage.removeItem("audioCurrentTime");
 });
+
+// Restore volume from localStorage (if available)
+if (volumeSlider) {
+  const savedVolume = parseFloat(localStorage.getItem("audioVolume"));
+  if (!isNaN(savedVolume)) {
+    audio.volume = savedVolume;
+    volumeSlider.value = Math.round(savedVolume * 100);
+  } else {
+    audio.volume = 0.3;
+    volumeSlider.value = 30;
+  }
+
+  // Update audio volume and save to localStorage when slider changes
+  volumeSlider.addEventListener("input", () => {
+    audio.volume = volumeSlider.value / 100;
+    localStorage.setItem("audioVolume", audio.volume);
+    setVolumeProgress();
+  });
+}
