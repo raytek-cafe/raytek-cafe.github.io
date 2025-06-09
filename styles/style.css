@@ -318,7 +318,7 @@ a:hover {
 .navbar a {
   color: white; /* Text color for links */
   text-decoration: none; /* Remove underline from links */
-  transition: background-color 0.3s, text-shadow 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+  transition: text-shadow 0.3s; /* Smooth transition for hover effects */
   padding: 8px 20px; /* Padding for links */
   border-radius: 3px; /* Rounded corners for links */
 }
