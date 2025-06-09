@@ -432,27 +432,27 @@ a:hover {
 /* Seekbar thumb for Chrome, Edge, Safari */
 #seekbar::-webkit-slider-thumb {
   -webkit-appearance: none;
-  width: 4px;
-  height: 13px;
+  width: 6px;
+  height: 15px;
   border-radius: 0%;
   background: var(--link-color);
   border: 1px solid #2d2d2d;
   cursor: pointer;
   box-shadow: 0 0 4px var(--link-color);
-  margin-top: -5.5px;
+  margin-top: -6.5px;
 }
 
 /* Volume slider thumb for Chrome, Edge, Safari */
 #volume-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
-  width: 4px;
-  height: 13px;
+  width: 6px;
+  height: 15px;
   border-radius: 0%;
   background: var(--link-color);
   border: 1px solid #2d2d2d;
   cursor: pointer;
   box-shadow: 0 0 4px var(--link-color);
-  margin-top: -5.5px;
+  margin-top: -6.5px;
 }
 
 /* Track background for Firefox */
@@ -473,8 +473,8 @@ a:hover {
 
 /* Seekbar thumb for Firefox */
 #seekbar::-moz-range-thumb {
-  width: 3px;
-  height: 12px;
+  width: 4px;
+  height: 14px;
   border-radius: 0%;
   background: var(--link-color);
   border: 1px solid #2d2d2d;
@@ -484,8 +484,8 @@ a:hover {
 
 /* Volume slider thumb for Firefox */
 #volume-slider::-moz-range-thumb {
-  width: 3px;
-  height: 12px;
+  width: 4px;
+  height: 14px;
   border-radius: 0%;
   background: var(--link-color);
   border: 1px solid #2d2d2d;
