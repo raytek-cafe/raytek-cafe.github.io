@@ -43,6 +43,46 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+// Theme toggle button logic with rainbow mode activation and animated theme variables
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleBtn = document.getElementById("theme-toggle"); // Get the theme toggle button by its ID
+  if (toggleBtn) {
+    let clickTimes = []; // Array to store timestamps of recent clicks
+    let rainbowActive = false; // Track if rainbow mode is active
+    let rainbowTimeout = null; // Timeout for rainbow mode
+
+    function activateRainbowMode() {
+      if (rainbowActive) return;
+      rainbowActive = true;
+      document.body.classList.add("rainbow-theme"); // Add rainbow-theme to body
+      rainbowTimeout = setTimeout(() => {
+        document.body.classList.remove("rainbow-theme"); // Remove after 5 seconds
+        rainbowActive = false;
+      }, 30000);
+    }
+
+    toggleBtn.onclick = function () {
+      const now = Date.now();
+      clickTimes.push(now);
+      // Keep only clicks in the last 1.2 seconds
+      clickTimes = clickTimes.filter((t) => now - t < 1200);
+
+      // If 7 or more clicks in 1.2 seconds, activate rainbow mode
+      if (clickTimes.length >= 7) {
+        activateRainbowMode();
+        clickTimes = [];
+        return;
+      }
+
+      if (!rainbowActive) {
+        let idx = getCurrentThemeIndex();
+        idx = (idx + 1) % themes.length;
+        setTheme(idx);
+      }
+    };
+  }
+});
+
 // Subtitle randomizer and toggler with persistence, loading subtitles from external files
 document.addEventListener("DOMContentLoaded", function () {
   const subtitle = document.querySelector(".subtitle"); // Get the subtitle element

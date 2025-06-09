@@ -60,6 +60,7 @@
 .theme-red {
   --glow-color: red; /* Primary color for highlights */
   --shadow-color: rgba(195, 0, 0, 0.5); /* Secondary color for shadows */
+  --secondary-shadow-color: rgba(195, 0, 0, 0.3); /* Secondary shadow color */
   --link-color: #ff3636; /* Tertiary color for links */
   --link-color-hover: #ff7878; /* Tertiary color for links on hover */
   --page-color: #2c2c2c; /* Page background color */
@@ -68,6 +69,7 @@
 .theme-orange {
   --glow-color: #ff9f00; /* Primary color for highlights */
   --shadow-color: rgba(180, 90, 0, 0.5); /* Secondary color for shadows */
+  --secondary-shadow-color: rgba(180, 90, 0, 0.3); /* Secondary shadow color */
   --link-color: #ff9f00; /* Tertiary color for links */
   --link-color-hover: #ffc551; /* Tertiary color for links on hover */
   --page-color: #2c2c2c; /* Page background color */
@@ -76,6 +78,7 @@
 .theme-yellow {
   --glow-color: #ffea00; /* Primary color for highlights */
   --shadow-color: rgba(180, 150, 0, 0.5); /* Secondary color for shadows */
+  --secondary-shadow-color: rgba(180, 150, 0, 0.3); /* Secondary shadow color */
   --link-color: #ffea00; /* Tertiary color for links */
   --link-color-hover: #fff59b; /* Tertiary color for links on hover */
   --page-color: #2c2c2c; /* Page background color */
@@ -84,6 +87,7 @@
 .theme-lime {
   --glow-color: #96d700; /* Primary color for highlights */
   --shadow-color: rgba(58, 184, 0, 0.5); /* Secondary color for shadows */
+  --secondary-shadow-color: rgba(58, 184, 0, 0.3); /* Secondary shadow color */
   --link-color: #96d700; /* Tertiary color for links */
   --link-color-hover: #d6ff7a; /* Tertiary color for links on hover */
   --page-color: #2c2c2c; /* Page background color */
@@ -92,6 +96,7 @@
 .theme-mint {
   --glow-color: #42ff9a;
   --shadow-color: rgba(0, 146, 88, 0.5);
+  --secondary-shadow-color: rgba(0, 146, 88, 0.3);
   --link-color: #42ff9a;
   --link-color-hover: #d6ffe7;
   --page-color: #2c2c2c; /* Page background color */
@@ -100,6 +105,7 @@
 .theme-cyan {
   --glow-color: #85f3ff;
   --shadow-color: rgba(0, 121, 161, 0.5);
+  --secondary-shadow-color: rgba(0, 121, 161, 0.3);
   --link-color: #85f3ff;
   --link-color-hover: #d7f5ff;
   --page-color: #2c2c2c; /* Page background color */
@@ -108,6 +114,7 @@
 .theme-blue {
   --glow-color: #478eff; /* Primary color for highlights */
   --shadow-color: rgba(0, 68, 255, 0.5); /* Secondary color for shadows */
+  --secondary-shadow-color: rgba(0, 68, 255, 0.3); /* Secondary shadow color */
   --link-color: #478eff; /* Tertiary color for links */
   --link-color-hover: #9cc0ff; /* Tertiary color for links on hover */
   --page-color: #2c2c2c; /* Page background color */
@@ -116,6 +123,7 @@
 .theme-violet {
   --glow-color: #b366ff;
   --shadow-color: rgba(114, 0, 180, 0.5);
+  --secondary-shadow-color: rgba(114, 0, 180, 0.3);
   --link-color: #b366ff;
   --link-color-hover: #e1b9ff;
   --page-color: #2c2c2c; /* Page background color */
@@ -124,6 +132,7 @@
 .theme-pink {
   --glow-color: #ff4dca; /* Primary color for highlights */
   --shadow-color: rgba(180, 0, 90, 0.5); /* Secondary color for shadows */
+  --secondary-shadow-color: rgba(180, 0, 90, 0.3); /* Secondary shadow color */
   --link-color: #ff4dca; /* Tertiary color for links */
   --link-color-hover: #ff97de; /* Tertiary color for links on hover */
   --page-color: #2c2c2c; /* Page background color */
@@ -132,9 +141,36 @@
 .theme-gray {
   --glow-color: #ababab; /* Primary color for highlights */
   --shadow-color: rgba(159, 159, 159, 0.5); /* Secondary color for shadows */
+  --secondary-shadow-color: rgba(
+    159,
+    159,
+    159,
+    0.3
+  ); /* Secondary shadow color */
   --link-color: #ababab; /* Tertiary color for links */
   --link-color-hover: #cacaca; /* Tertiary color for links on hover */
   --page-color: #2c2c2c; /* Page background color */
+}
+
+.rainbow-theme {
+  animation: hue-rainbow 3s linear infinite;
+}
+
+@keyframes hue-rainbow {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.page {
+  transition: box-shadow 0.5s linear;
+}
+
+a {
+  transition: color 0.5s linear;
 }
 
 /* ================================================================================================= base styles */
@@ -152,12 +188,18 @@ body {
   min-height: 100vh; /* Minimum height of the viewport */
 }
 
+.page-container {
+  box-shadow: 0 0 50px var(--secondary-shadow-color); /* Shadow for depth */
+  max-width: 850px;
+  margin: 0 auto; /* Center the container horizontally */
+}
+
 .page {
   max-width: 850px; /* Set max container width to 800px */
   box-sizing: border-box; /* Include padding and border in element's total width and height */
   background-color: var(--page-color); /* Dark background for the container */
   color: var(--text-color); /* Text color */
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 1), 0 0 150px var(--shadow-color); /* Shadow for depth */
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.5), 0px 0px 150px var(--shadow-color); /* Shadow for depth */
   border: 2px solid #464646; /* Border for the container */
   outline: 3px solid #1c1c1c; /* Outline for the container */
   margin: 0 auto; /* Center the container horizontally */
