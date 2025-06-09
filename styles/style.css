@@ -381,6 +381,7 @@ a:hover {
   min-width: 30px;
   border-radius: 2px;
   outline: 1px solid #424242;
+  margin: 4px 0px;
 }
 #seekbar {
   appearance: none;
