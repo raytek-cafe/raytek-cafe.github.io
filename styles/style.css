@@ -129,7 +129,6 @@
   --page-color: #2c2c2c; /* Page background color */
 }
 
-
 /* ================================================================================================= base styles */
 
 html {
@@ -190,6 +189,15 @@ a:hover {
   padding-left: 40px; /* Padding on the left */
   text-shadow: 0 0 5px white, 0 0 40px white; /* Header text glow */
   border-radius: 2px 2px 0 0; /* Rounded corners for the top of the header */
+  position: relative; /* Position header content relatively */
+}
+
+.header-right {
+  position: absolute; /* Position header right content absolutely */
+  right: 0;
+  min-width: 50%;
+  min-height: 100%;
+  user-select: none; /* Prevent text selection */;
 }
 
 .title {

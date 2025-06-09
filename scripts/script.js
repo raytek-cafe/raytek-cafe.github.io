@@ -43,12 +43,59 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+// Subtitle randomizer and toggler with persistence
+document.addEventListener("DOMContentLoaded", function () {
+  const subtitle = document.querySelector(".subtitle");
+  if (!subtitle) return;
+
+  const normalSubtitles = [
+    "making tech fun again",
+    "open source, open mind",
+    "hardware, software, everywhere",
+    "where curiosity meets code",
+    "powered by community",
+  ];
+  const altSubtitles = [
+    "secret tech society",
+    "you found the easter egg!",
+    "hacker mode: enabled",
+    "welcome to the club",
+    "enjoy the hidden vibes",
+  ];
+
+  let altMode = localStorage.getItem("subtitleAltMode") === "true";
+  let subtitles = altMode ? altSubtitles : normalSubtitles;
+  let lastIdx = parseInt(localStorage.getItem("subtitleLastIdx"));
+  if (isNaN(lastIdx)) lastIdx = -1;
+
+  function setRandomSubtitle() {
+    let idx;
+    do {
+      idx = Math.floor(Math.random() * subtitles.length);
+    } while (subtitles.length > 1 && idx === lastIdx);
+    subtitle.textContent = subtitles[idx];
+    lastIdx = idx;
+    localStorage.setItem("subtitleLastIdx", idx);
+  }
+  setRandomSubtitle();
+
+  subtitle.addEventListener("click", function () {
+    altMode = !altMode;
+    localStorage.setItem("subtitleAltMode", altMode);
+    subtitles = altMode ? altSubtitles : normalSubtitles;
+    // lastIdx persists across reloads, so don't reset here
+    setRandomSubtitle();
+  });
+});
+
 // Get the current script's directory
 const scriptPath = document.currentScript.src; // Get the path of the currently executing script
 const scriptDir = scriptPath.substring(0, scriptPath.lastIndexOf("/") + 1); // Extract the directory path from the script path
 
 // Header background image changer on 10 clicks
 document.addEventListener("DOMContentLoaded", function () {
+  const headerRight = document.querySelector(".header-right");
+  if (!headerRight) return;
   const header = document.querySelector(".header");
   if (!header) return;
 
@@ -62,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Load persisted image index or default to 0
   let currentImage = parseInt(localStorage.getItem("headerImageIndex")) || 0;
 
-  header.addEventListener("click", function () {
+  headerRight.addEventListener("click", function () {
     clickCount++;
     if (clickCount === 10) {
       // Cycle to next image
