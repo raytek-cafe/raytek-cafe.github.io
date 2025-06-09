@@ -255,7 +255,7 @@ a:hover {
 
 .header {
   min-height: 175px; /* Set header height to at least 175px */
-  background: linear-gradient(to right, #0a0a0a 250px, transparent 70%),
+  background: linear-gradient(to right, #0a0a0a 200px, transparent 70%),
     url("img/header-bg.jpg") no-repeat center 35%; /* Background image with gradient */
   background-size: cover; /* Cover the entire header area */
   display: flex; /* Flexbox for centering content */
@@ -419,10 +419,6 @@ th {
 
 /* =========================================================================================== responsive layout */
 @media (max-width: 900px) {
-  .header {
-    padding: 0 20px; /* Reduce padding for smaller screens */
-  }
-
   .container {
     padding: 0 2%; /* Reduce padding for smaller screens */
   }
