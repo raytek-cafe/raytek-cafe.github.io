@@ -178,7 +178,6 @@ table,
 button {
   opacity: 0; /* Start with items hidden */
   animation: fadeIn 1s cubic-bezier(0.4, 0, 0.2, 1) forwards; /* Fade in animation */
-  user-select: none; /* make text non selectable so its easier to click */
 }
 
 @keyframes fadeIn {
@@ -279,6 +278,10 @@ a:hover {
 
 .title {
   font-size: 2.125rem; /* Title font size (same as h1) */
+}
+
+.subtitle {
+  user-select: none; /* make text non selectable so its easier to click */
 }
 
 .title a {
