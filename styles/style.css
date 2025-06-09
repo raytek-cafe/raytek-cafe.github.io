@@ -180,7 +180,7 @@ a {
 /* ================================================================================================= base styles */
 
 html {
-  font-size: 10pt; /* Base font size */
+  font-size: clamp(7pt, 1.5vw, 10pt);
 }
 
 body {
@@ -368,7 +368,7 @@ button {
 table {
   width: 100%; /* Full width for tables */
   border-collapse: collapse; /* Collapse borders */
-  font-size: 9pt; /* Font size for table text */
+  font-size: clamp(6px, 1.5vw, 9pt); /* Responsive font size for tables */
   line-height: 1.6; /* Line height for table text */
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Shadow for tables */
   margin-bottom: 20px; /* Margin at the bottom of tables */
@@ -448,7 +448,6 @@ th {
   th,
   td {
     padding: 4px;
-    font-size: clamp(6px, 1.5vw, 9pt); /* Responsive font size for tables */
     overflow-x: auto;
   }
 }
