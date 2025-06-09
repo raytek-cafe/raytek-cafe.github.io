@@ -119,35 +119,26 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     setRandomSubtitle(); // Set initial subtitle
 
-    // --- Long press detection for meme mode ---
-    let pressTimer = null; // Timer for long press detection
-    let longPressTriggered = false; // Flag to track if long press was triggered
+    // --- Spam click detection for meme mode (works on mobile and desktop) ---
+    let clickTimes = []; // Store timestamps of recent clicks
 
-    subtitle.addEventListener("mousedown", function () {
-      longPressTriggered = false; // Reset flag on new press
-      pressTimer = setTimeout(() => {
-        // Long press detected
-        longPressTriggered = true;
+    subtitle.addEventListener("click", function (e) {
+      const now = Date.now();
+      clickTimes.push(now);
+      // Keep only clicks in the last 1 second
+      clickTimes = clickTimes.filter((t) => now - t < 1000);
+
+      if (clickTimes.length >= 5) {
+        // 5 rapid clicks triggers meme mode
         mode = 2; // Meme mode
         localStorage.setItem("subtitleMode", mode);
         subtitles = [normalSubtitles, altSubtitles, memeSubtitles][mode];
         setRandomSubtitle();
-      }, 600);
-    });
-    subtitle.addEventListener("mouseup", function () {
-      clearTimeout(pressTimer);
-    });
-    subtitle.addEventListener("mouseleave", function () {
-      clearTimeout(pressTimer);
-    });
-
-    // Click handler for toggling subtitle sets (normal/alt)
-    subtitle.addEventListener("click", function (e) {
-      if (longPressTriggered) {
-        // If long press was triggered, skip normal click logic
+        clickTimes = []; // Reset to prevent repeated triggers
         return;
       }
-      // Toggle between normal and alt
+
+      // Toggle between normal and alt (if not meme mode)
       mode = mode === 1 ? 0 : 1;
       localStorage.setItem("subtitleMode", mode);
       subtitles = [normalSubtitles, altSubtitles, memeSubtitles][mode];
