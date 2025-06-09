@@ -195,7 +195,7 @@ a:hover {
 .header-right {
   position: absolute; /* Position header right content absolutely */
   right: 0;
-  min-width: 50%;
+  min-width: 70%;
   min-height: 100%;
   user-select: none; /* Prevent text selection */;
 }
