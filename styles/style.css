@@ -574,7 +574,7 @@ th {
   }
 
   #theme-toggle {
-    right: 10px; /* Adjust position for smaller screens */
+    right: 20px; /* Adjust position for smaller screens */
   }
 
   .player {
