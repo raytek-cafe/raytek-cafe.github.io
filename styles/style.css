@@ -473,7 +473,7 @@ a:hover {
 
 /* Seekbar thumb for Firefox */
 #seekbar::-moz-range-thumb {
-  width: 2px;
+  width: 3px;
   height: 12px;
   border-radius: 0%;
   background: var(--link-color);
@@ -484,7 +484,7 @@ a:hover {
 
 /* Volume slider thumb for Firefox */
 #volume-slider::-moz-range-thumb {
-  width: 2px;
+  width: 3px;
   height: 12px;
   border-radius: 0%;
   background: var(--link-color);
