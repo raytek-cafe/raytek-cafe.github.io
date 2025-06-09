@@ -29,7 +29,7 @@ function setTheme(idx) {
 const savedTheme = localStorage.getItem("theme") || "theme-red"; // Default to "theme-red" if no theme is saved
 setTheme(themes.indexOf(savedTheme)); // Set the theme based on the saved theme
 
-// ====================================== Theme toggle button logic with rainbow mode activation and animated theme variables ============== //
+// ========== Theme toggle button logic with rainbow mode activation and animated theme variables ============== //
 document.addEventListener("DOMContentLoaded", function () {
   // Ensure the DOM is fully loaded before executing this code
   const toggleBtn = document.getElementById("theme-toggle"); // Get the theme toggle button by its ID
@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// ============================= Subtitle randomizer and toggler with persistence, loading subtitles from external files ============== //
+// ====== Subtitle randomizer and toggler with persistence, loading subtitles from external files ============== //
 document.addEventListener("DOMContentLoaded", function () {
   const subtitle = document.querySelector(".subtitle"); // Get the subtitle element
   if (!subtitle) return; // Exit if subtitle element does not exist
@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// ======================================================================================= Header Background Image Changer ============== //
+// ============================================================== Header Background Image Changer ============== //
 // This script changes the header background image after 10 clicks on the header-right element.
 
 // Get the current script's directory for relative image paths
