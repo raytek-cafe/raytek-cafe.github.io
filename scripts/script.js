@@ -120,15 +120,15 @@ document.addEventListener("DOMContentLoaded", function () {
     setRandomSubtitle(); // Set initial subtitle
 
     // --- Long press detection for meme mode ---
-    let pressTimer = null; // Timer for long press detection
-    let longPressTriggered = false; // Flag to track if long press was triggered
+    let pressTimer = null;
+    let longPressTriggered = false;
 
+    // Desktop: mouse long press
     subtitle.addEventListener("mousedown", function () {
-      longPressTriggered = false; // Reset flag on new press
+      longPressTriggered = false;
       pressTimer = setTimeout(() => {
-        // Long press detected
         longPressTriggered = true;
-        mode = 2; // Meme mode
+        mode = 2;
         localStorage.setItem("subtitleMode", mode);
         subtitles = [normalSubtitles, altSubtitles, memeSubtitles][mode];
         setRandomSubtitle();
@@ -138,6 +138,24 @@ document.addEventListener("DOMContentLoaded", function () {
       clearTimeout(pressTimer);
     });
     subtitle.addEventListener("mouseleave", function () {
+      clearTimeout(pressTimer);
+    });
+
+    // Mobile: touch long press
+    subtitle.addEventListener("touchstart", function () {
+      longPressTriggered = false;
+      pressTimer = setTimeout(() => {
+        longPressTriggered = true;
+        mode = 2;
+        localStorage.setItem("subtitleMode", mode);
+        subtitles = [normalSubtitles, altSubtitles, memeSubtitles][mode];
+        setRandomSubtitle();
+      }, 600);
+    });
+    subtitle.addEventListener("touchend", function () {
+      clearTimeout(pressTimer);
+    });
+    subtitle.addEventListener("touchcancel", function () {
       clearTimeout(pressTimer);
     });
 

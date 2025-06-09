@@ -178,7 +178,7 @@ table,
 button {
   opacity: 0; /* Start with items hidden */
   animation: fadeIn 1s cubic-bezier(0.4, 0, 0.2, 1) forwards; /* Fade in animation */
-  user-select: none;
+  user-select: none; /* make text non selectable so its easier to click */
 }
 
 @keyframes fadeIn {
