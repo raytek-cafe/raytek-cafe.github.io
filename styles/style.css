@@ -306,14 +306,16 @@ a:hover {
   align-items: center; /* Center items vertically */
   background: linear-gradient(
     to bottom,
-    #464646,
-    #000
+    #606060,
+    #202020 50%,
+    #000 50%,
+    #252525
   ); /* Gradient background for navbar */
   padding: 4px; /* Padding for the navbar */
   position: sticky; /* Make navbar sticky */
   top: 0; /* Stick to the top of the viewport */
-  border-top: 1px solid #6b6b6b; /* Border for navbar */
-  border-bottom: 1px solid #2c2c2c; /* Border for navbar */
+  border-top: 1px solid #aaa; /* Border for navbar */
+  border-bottom: 1px solid #555; /* Border for navbar */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Shadow for navbar */
   z-index: 1000; /* Ensure navbar is above other content */
 }
@@ -328,10 +330,18 @@ a:hover {
 
 .navbar a:hover {
   /* Hover effect for links */
-  background-color: #070707; /* Light background on hover */
+  background: linear-gradient(
+    to bottom,
+    #707070,
+    #303030 50%,
+    #111 50%,
+    #353535
+  ); /* Light background on hover */
+  background-color: #070707;
   text-shadow: 0 0 5px var(--glow-color), 0 0 10px var(--glow-color),
     0 0 20px var(--glow-color), 0 0 40px var(--glow-color); /* Red glow on text */
-  box-shadow: 0 0 0 1px #2d2d2d; /* Outline on button (shadow can be animated as opposed to border) */
+  box-shadow: inset 0 0 0 1px #757575; /* Outline on button (shadow can be animated as opposed to border) */
+  outline: 1px solid #070707;
 }
 
 #theme-toggle {
@@ -342,13 +352,18 @@ a:hover {
   border-radius: 3px; /* Rounded corners for toggle button */
   font-family: "Ruberoid", sans-serif; /* Use Ruberoid font for toggle button */
   padding: 4px 4px; /* Padding for toggle button */
-  transition: background-color 0.3s, text-shadow 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
-  border: 1px solid #6c6c6c; /* Border for toggle button */
-  outline: 1px solid #242424; /* Outline for toggle button */
+  border: 1px solid #757575; /* Border for toggle button */
+  outline: 1px solid #070707; /* Outline for toggle button */
 }
 
 #theme-toggle:hover {
-  background-color: #070707; /* Light background on hover */
+  background: linear-gradient(
+    to bottom,
+    #707070,
+    #303030 50%,
+    #111 50%,
+    #353535
+  );
   cursor: pointer; /* Pointer cursor on hover */
 }
 
