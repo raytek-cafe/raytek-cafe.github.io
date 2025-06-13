@@ -359,10 +359,10 @@ a:hover {
 #theme-toggle:hover {
   background: linear-gradient(
     to bottom,
-    #707070,
-    #303030 50%,
+    #757575,
+    #404040 50%,
     #111 50%,
-    #353535
+    #303030
   );
   cursor: pointer; /* Pointer cursor on hover */
 }
