@@ -307,14 +307,14 @@ a:hover {
   background: linear-gradient(
     to bottom,
     #606060,
-    #202020 50%,
+    #252525 50%,
     #000 50%,
-    #252525
+    #202020
   ); /* Gradient background for navbar */
   padding: 4px; /* Padding for the navbar */
   position: sticky; /* Make navbar sticky */
   top: 0; /* Stick to the top of the viewport */
-  border-top: 1px solid #aaa; /* Border for navbar */
+  border-top: 1px solid #999; /* Border for navbar */
   border-bottom: 1px solid #555; /* Border for navbar */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Shadow for navbar */
   z-index: 1000; /* Ensure navbar is above other content */
@@ -332,10 +332,10 @@ a:hover {
   /* Hover effect for links */
   background: linear-gradient(
     to bottom,
-    #707070,
-    #303030 50%,
+    #757575,
+    #404040 50%,
     #111 50%,
-    #353535
+    #303030
   ); /* Light background on hover */
   background-color: #070707;
   text-shadow: 0 0 5px var(--glow-color), 0 0 10px var(--glow-color),
