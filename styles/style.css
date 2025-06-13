@@ -387,14 +387,21 @@ a:hover {
 }
 
 #play-pause {
-  background: linear-gradient(#4e4e4e, #181818);
+  background: linear-gradient(
+    to bottom,
+    #757575,
+    #404040 50%,
+    #000 50%,
+    #303030
+  );
   color: #fff;
   border: none;
   cursor: pointer;
   font-family: "Ruberoid Light", sans-serif;
   min-width: 30px;
   border-radius: 2px;
-  outline: 1px solid #424242;
+  box-shadow: inset 0 0 0 1px #808080; /* Border for toggle button */
+  outline: 1px solid #000; /* Outline for toggle button */
   margin: 4px 0px;
 }
 #seekbar {
