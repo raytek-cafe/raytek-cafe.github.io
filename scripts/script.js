@@ -31,9 +31,11 @@ setTheme(themes.indexOf(savedTheme)); // Set the theme based on the saved theme
 
 // ========== Theme toggle button logic with rainbow mode activation and animated theme variables ============== //
 document.addEventListener("DOMContentLoaded", function () {
+  
   // Ensure the DOM is fully loaded before executing this code
   const toggleBtn = document.getElementById("theme-toggle"); // Get the theme toggle button by its ID
   if (toggleBtn) {
+
     // Check if the toggle button exists
     let clickTimes = []; // Array to store timestamps of recent clicks
     let rainbowActive = false; // Track if rainbow mode is active
@@ -270,6 +272,7 @@ seekbar.addEventListener("input", function () {
   const percent = (seekbar.value / seekbar.max) * 100;
   seekbar.style.setProperty("--seekbar-progress", percent + "%");
 });
+
 // Set initial value on page load
 seekbar.dispatchEvent(new Event("input"));
 
