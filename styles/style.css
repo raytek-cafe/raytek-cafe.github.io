@@ -403,7 +403,21 @@ a:hover {
   box-shadow: inset 0 0 0 1px #808080; /* Border for toggle button */
   outline: 1px solid #000; /* Outline for toggle button */
   margin: 4px 0px;
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
 }
+
+#play-pause:hover {
+  background: linear-gradient(
+    to bottom,
+    #909090,
+    #505050 50%,
+    #111 50%,
+    #303030
+  );
+}
+
 #seekbar {
   appearance: none;
   flex: 1;
