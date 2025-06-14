@@ -31,11 +31,9 @@ setTheme(themes.indexOf(savedTheme)); // Set the theme based on the saved theme
 
 // ========== Theme toggle button logic with rainbow mode activation and animated theme variables ============== //
 document.addEventListener("DOMContentLoaded", function () {
-  
   // Ensure the DOM is fully loaded before executing this code
   const toggleBtn = document.getElementById("theme-switcher"); // Get the theme toggle button by its ID
   if (toggleBtn) {
-
     // Check if the toggle button exists
     let clickTimes = []; // Array to store timestamps of recent clicks
     let rainbowActive = false; // Track if rainbow mode is active
@@ -199,6 +197,8 @@ document.addEventListener("DOMContentLoaded", function () {
     scriptDir + "../styles/img/header-bg-alt3.jpg", // alternative 3
   ];
 
+  const glassPath = scriptDir + "../styles/img/glass.png";
+
   let currentImage = 0; // Always start from the first image on refresh
 
   headerRight.addEventListener("click", function () {
@@ -206,8 +206,9 @@ document.addEventListener("DOMContentLoaded", function () {
     if (clickCount === 10) {
       // If clicked 10 times
       currentImage = (currentImage + 1) % images.length; // Cycle to next image
-      header.style.background = `linear-gradient(to right, #0a0a0a 200px, transparent 70%), url("${images[currentImage]}") no-repeat center 35%`; // Set header background
-      header.style.backgroundSize = "cover"; // Ensure the background covers the header
+      // header.style.background = `linear-gradient(to right, #0a0a0a 200px, transparent 70%), url("${images[currentImage]}") no-repeat center 35%`; // Set header background
+      header.style.background = `url("${glassPath}") no-repeat 35%, linear-gradient(to right, #0a0a0a 200px, transparent 70%), url("${images[currentImage]}") no-repeat center 35%`;
+      header.style.backgroundSize = "cover, cover, cover"
       clickCount = 0; // Reset click count after changing the image
     }
   });
