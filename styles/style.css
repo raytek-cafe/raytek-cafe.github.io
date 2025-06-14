@@ -343,7 +343,7 @@ a:hover {
   outline: 1px solid #050505;
 }
 
-#theme-toggle {
+#theme-switcher {
   position: absolute; /* Position toggle button absolutely */
   right: 40px; /* Right align toggle button */
   background: transparent; /* Transparent background for toggle button */
@@ -351,11 +351,10 @@ a:hover {
   border-radius: 3px; /* Rounded corners for toggle button */
   font-family: "Ruberoid", sans-serif; /* Use Ruberoid font for toggle button */
   padding: 4px 4px; /* Padding for toggle button */
-  border: 1px solid #606060; /* Border for toggle button */
-  outline: 1px solid #050505; /* Outline for toggle button */
+  border: none;
 }
 
-#theme-toggle:hover {
+#theme-switcher:hover {
   background: linear-gradient(
     to bottom,
     #757575,
@@ -364,9 +363,11 @@ a:hover {
     #303030
   );
   cursor: pointer; /* Pointer cursor on hover */
+  box-shadow: inset 0 0 0 1px #606060; /* Border for toggle button */
+  outline: 1px solid #050505; /* Outline for toggle button */
 }
 
-#theme-toggle img {
+#theme-switcher img {
   width: 24px; /* Width for theme toggle icon */
   vertical-align: middle; /* Align icon vertically in the middle */
 }
@@ -606,7 +607,7 @@ th {
     padding: 8px 10px; /* Adjust padding for smaller screens */
   }
 
-  #theme-toggle {
+  #theme-switcher {
     right: 20px; /* Adjust position for smaller screens */
   }
 

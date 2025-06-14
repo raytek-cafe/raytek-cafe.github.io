@@ -33,7 +33,7 @@ setTheme(themes.indexOf(savedTheme)); // Set the theme based on the saved theme
 document.addEventListener("DOMContentLoaded", function () {
   
   // Ensure the DOM is fully loaded before executing this code
-  const toggleBtn = document.getElementById("theme-toggle"); // Get the theme toggle button by its ID
+  const toggleBtn = document.getElementById("theme-switcher"); // Get the theme toggle button by its ID
   if (toggleBtn) {
 
     // Check if the toggle button exists
