@@ -258,9 +258,14 @@ a:hover {
 
 .header {
   min-height: 175px; /* Set header height to at least 175px */
-  background: linear-gradient(to right, #0a0a0a 200px, transparent 70%),
-    url("img/header-bg.jpg") no-repeat center 35%; /* Background image with gradient */
-  background-size: cover; /* Cover the entire header area */
+  background:
+    /* Top layer: transparent PNG overlay */ url("img/glass.png")
+      no-repeat 35%,
+    /* Middle layer: gradient */
+      linear-gradient(to right, #0a0a0a 200px, transparent 70%),
+    /* Bottom layer: header background image */ url("img/header-bg.jpg")
+      no-repeat center 35%;
+  background-size: cover, /* overlay.png */ cover, /* gradient */ cover; /* header-bg.jpg */
   display: flex; /* Flexbox for centering content */
   flex-direction: column; /* Order header content vertically */
   justify-content: center; /* Center content vertically */
