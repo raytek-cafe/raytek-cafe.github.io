@@ -28,14 +28,14 @@
 @font-face {
   font-family: "Ruberoid";
   font-style: italic;
-  src: url(fonts/Ruberoid-Italic.ttf);
+  src: url(fonts/Ruberoid-Oblique.ttf);
 }
 
 @font-face {
   font-family: "Ruberoid";
   font-weight: bold;
   font-style: italic;
-  src: url(fonts/Ruberoid-BoldItalic.ttf);
+  src: url(fonts/Ruberoid-BoldOblique.ttf);
 }
 
 @font-face {
@@ -240,6 +240,12 @@ body {
 .gap {
   min-height: 50px; /* Minimum height for gap elements */
   user-select: none; /* Prevent text selection */
+}
+
+.quote {
+  border-left: 2px solid var(--link-color);
+  padding-left: 20px;
+  font-style: italic;
 }
 
 /* ======================================================================================================= links */
