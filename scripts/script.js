@@ -207,7 +207,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // If clicked 10 times
       currentImage = (currentImage + 1) % images.length; // Cycle to next image
       // header.style.background = `linear-gradient(to right, #0a0a0a 200px, transparent 70%), url("${images[currentImage]}") no-repeat center 35%`; // Set header background
-      header.style.background = `url("${glassPath}") no-repeat 35%, linear-gradient(to right, #0a0a0a 360px, transparent 85%), url("${images[currentImage]}") no-repeat center 35%`;
+      header.style.background = `url("${glassPath}") no-repeat 35%, linear-gradient(to right, #0a0a0a 310px, transparent 90%), url("${images[currentImage]}") no-repeat center 35%`;
       header.style.backgroundSize = "cover, cover, cover"
       clickCount = 0; // Reset click count after changing the image
     }

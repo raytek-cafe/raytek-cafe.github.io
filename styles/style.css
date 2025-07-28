@@ -268,7 +268,7 @@ a:hover {
     /* Top layer: transparent PNG overlay */ url("img/glass.png")
       no-repeat 35%,
     /* Middle layer: gradient */
-      linear-gradient(to right, #0a0a0a 360px, transparent 85%),
+      linear-gradient(to right, #0a0a0a 310px, transparent 90%),
     /* Bottom layer: header background image */ url("img/header-bg.jpg")
       no-repeat center 35%;
   background-size: cover, /* overlay.png */ cover, /* gradient */ cover; /* header-bg.jpg */
@@ -636,6 +636,10 @@ th {
 
   .content {
     padding: 0px 20px 20px; /* Reduce padding for smaller screens */
+  }
+
+  .quote {
+    padding-left: 13px;
   }
 
   table,
