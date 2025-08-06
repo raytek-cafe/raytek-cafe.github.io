@@ -547,11 +547,23 @@ a:hover {
 /* ===================================================================================================== content */
 
 .content {
-  padding: 10px 40px 40px; /* Padding for content area */
+  padding: 10px 40px 25px; /* Padding for content area */
   line-height: 1.8; /* Line height for readability */
   box-shadow: inset 10px 0 20px -10px rgba(0, 0, 0, 0.5),
     /* Left side */ inset -10px 0 20px -10px rgba(0, 0, 0, 0.5); /* Right side */
   flex-grow: 1; /* Allow content to grow and fill available space */
+}
+
+.image {
+  width: 300px;
+  border-radius: 3px;
+  border: 2px solid #727272;
+  margin: 8px;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid #727272;
 }
 
 /* ====================================================================================================== tables */
