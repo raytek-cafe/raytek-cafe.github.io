@@ -49,6 +49,19 @@
   src: url(fonts/Ruberoid-Bold.ttf);
 }
 
+@font-face {
+  font-family: "Ruberoid";
+  font-weight: 500;
+  src: url(fonts/Ruberoid-SemiBold.ttf)
+}
+
+@font-face {
+  font-family: "Ruberoid";
+  font-weight: 500;
+  font-style: italic;
+  src: url(fonts/Ruberoid-SemiBoldOblique.ttf);
+}
+
 /* ====================================================================================== color scheme variables */
 
 :root {
@@ -263,7 +276,7 @@ a:hover {
 /* ====================================================================================================== header */
 
 .header {
-  min-height: 175px; /* Set header height to at least 175px */
+  min-height: 150px; /* Set header height to at least 175px */
   background:
     /* Top layer: transparent PNG overlay */ url("img/glass.png")
       no-repeat 35%,
@@ -274,7 +287,7 @@ a:hover {
   background-size: cover, /* overlay.png */ cover, /* gradient */ cover; /* header-bg.jpg */
   display: flex; /* Flexbox for centering content */
   flex-direction: column; /* Order header content vertically */
-  justify-content: center; /* Center content vertically */
+  justify-content: center;
   padding-left: 40px; /* Padding on the left */
   /*text-shadow: 0 0 5px white, 0 0 40px white; /* Header text glow */
   border-radius: 2px 2px 0 0; /* Rounded corners for the top of the header */
@@ -293,7 +306,7 @@ a:hover {
 .title {
   font-size: 2.125rem; /* Title font size (same as h1) */
   max-height: 36px;
-  padding-top: 19px; /* bring title up 21px to account for motd */
+  padding-top: 21.4px; /* bring title up 21px to account for motd */
 }
 
 .title-image {
@@ -304,6 +317,8 @@ a:hover {
   user-select: none; /* make text non selectable so its easier to click */
   font-size: 9pt;
   padding-top: 3px;
+  font-style: italic;
+  font-weight: 400;
 }
 
 .title a {
