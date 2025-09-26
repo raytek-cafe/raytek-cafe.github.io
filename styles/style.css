@@ -319,6 +319,7 @@ a:hover {
   padding-top: 3px;
   font-style: italic;
   font-weight: 400;
+  text-shadow: 0 0 5px #fff, 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
 .title a {
