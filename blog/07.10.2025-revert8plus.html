@@ -67,7 +67,7 @@
 				style="position: relative; float: right; z-index: 1; x-index: 1"
 				/>
 				<p>
-					Revert8Plus V4 was never finished software (only build 1137 was marked as "latest," while the rest were marked as "Pre-release"), and with that, certain features were left unfinished or broken (e.g., logon screen issues or display settings refusing to launch).
+					Revert8Plus V4 was never finished software (build 1137 is the last build that is marked as "latest," while the rest were marked as "Pre-release"), and with that, certain features were left unfinished or broken (e.g., logon screen issues or display settings refusing to launch).
 				</p>
 				<p>
 					This wouldn't be a big issue, right? Not quite. With unfinished software, you have buggy code, and the buggy code in question (Registry Redirect) would cause things to break for the user (Firefox forks being the main focus). Those same users would blame those forks instead of Revert8Plus due to the mentality that "Transformation Packs only modify how Windows looks, so it must be the fork's fault."
@@ -119,7 +119,7 @@
 					</ul>
 				</p>
 				<p>
-					If you only want the glass look of Windows 7 but not the frames or the rest, you can just download and install <a href="https://github.com/ALTaleX531/OpenGlass">OpenGlass</a> and use this <a href="resources\re8pl\oglbasic.reg">reg file</a> for a glassy Aero-like title bar. <b>(NOTE: IT WILL IMPORT STUFF INTO KHLM)</b>
+					If you only want the glass look of Windows 7 but not the frames or the rest, you can just download and install <a href="https://github.com/ALTaleX531/OpenGlass">OpenGlass</a> and use this <a href="resources\re8pl\oglbasic.reg">reg file</a> for a glassy Aero-like title bar. <b>(NOTE: IT WILL IMPORT STUFF INTO HKLM)</b>
 				</p>
 				<p>
 					If you want to go crazy with it, you could install <a href="https://windhawk.net/">Windhawk</a> and the Accent Color Sync mod to have more color customization.
@@ -130,7 +130,7 @@
 				</p>
 				<p>
 					After you've installed SecureUxTheme, you need to copy the Aero10/11 theme into %systemroot%\Resources\Themes and then run the .theme file, which will greet you with a weird Windows 7 look. This can be fixed by adding the DWORD "CaptionButtons" in 
-					<b>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Dwm</b> or <b>HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\Dwm</b> and setting the value to <b>2</b>. If you want everything done, you can import <a href="resources\re8pl\oglfull.reg">this reg file</a> <b>(NOTE: IT WILL IMPORT STUFF INTO KHLM)</b>.
+					<b>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Dwm</b> or <b>HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\Dwm</b> and setting the value to <b>2</b>. If you want everything done, you can import <a href="resources\re8pl\oglfull.reg">this reg file</a> <b>(NOTE: IT WILL IMPORT STUFF INTO HKLM)</b>.
 					After logging out and back in, you will have your Windows almost look like Windows 7.
 				</p>
 					<center><h4>Windhawk</h4></center>
