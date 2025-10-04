@@ -20,6 +20,20 @@ Windhawk needs to hook into `svchost.exe` to successfully capture the creation o
 Please navigate to Windhawk's Settings, Advanced settings, More advanced settings, and make sure that
 `svchost.exe` is in the Process inclusion list.
 
+# Support
+This mod is primarily tested on Windows 10 Vibranium (which includes 2004, 20H2,
+21H1, 21H2, and 22H2), but it has been confirmed to work to a varying degree on:
+
+- Redstone 4 (1803)
+- Redstone 5 (1809)
+- Vanadium (1909)
+- Iron (Server 2022)
+
+Additionally, you can get it working on newer versions such as Windows 11 by replacing
+ExplorerFrame.dll with that from build 21332, but it is not supported and not recommended.
+
+Feel free to try it on other versions, but it may not work.
+
 # Showcase
 
 **Configured like Windows Vista**
@@ -53,20 +67,6 @@ This is an issue with the way the navigation pane works. Since the user folders 
 it will try to correct itself by adding them under This PC on the navigation pane. If you use
 [this registry hack](https://winclassic.net/thread/2013/moving-user-folders-back-pc), they will be moved back
 under your user folder, and stop reappearing under This PC on the navigation pane.
-
-# Support
-This mod is primarily tested on Windows 10 Vibranium (which includes 2004, 20H2,
-21H1, 21H2, and 22H2), but it has been confirmed to work to a varying degree on:
-
-- Redstone 4 (1803)
-- Redstone 5 (1809)
-- Vanadium (1909)
-- Iron (Server 2022)
-
-Additionally, you can get it working on newer versions such as Windows 11 by replacing
-ExplorerFrame.dll with that from build 21332, but it is not supported and not recommended.
-
-Feel free to try it on other versions, but it may not work.
 */
 // ==/WindhawkModReadme==
 
