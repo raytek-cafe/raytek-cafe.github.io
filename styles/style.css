@@ -593,6 +593,7 @@ code {
   font-weight: initial;
   color: #ffffff;
   font-size: 10pt;
+  word-break: break-all;
 }
 
 .image {
