@@ -4,9 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles/style.css" type="text/css" />
-    <title>
-      Don't use Revert8Plus v4, DIY instead! - raytek.cafe
-    </title>
+    <title>Don't use Revert8Plus v4, DIY instead! - raytek.cafe</title>
   </head>
   <body>
     <div class="container">
@@ -53,149 +51,375 @@
             />
           </div>
           <div class="content">
-            <h2>Don't use Revert8Plus v4, DIY instead!</h2>
-            <h3>Before I start...</h3>
-				<p>
-					This is <b>not</b> an attack against Teknix or his project (nor was it made because his Transformation Pack is more popular than mine). He has done incredible things, and it is insane what he has accomplished with Revert8Plus. <b>I even suggest helping him financially if you can <a href="https://teknixstuff.com/Network/Donate/">here</a></b>.
-				</p>
-				<p>
-					But despite the incredible work put into it, Revert8Plus has caused problems for <a href="https://github.com/raytek-cafe/Okaeri-Legacy/wiki/Okaeri-is-broken-on-Revert8Plus!">developers</a> and it's users.
-				</p>
-			<h3>The growing issues...</h3>
-				<img
-				class="image"
-				src="img/re8pl/ffbroke.png"
-				style="position: relative; float: right; z-index: 1; x-index: 1"
-				/>
-				<p>
-					Revert8Plus V4 was never finished software (build 1137 is the last build that was marked as "latest," while the rest were marked as "Pre-release"), and with that, certain features were left unfinished or broken (e.g., logon screen issues, display settings refusing to launch or the 'Custom' button in the installer not working due to not being finished in time for the deadline).
-				</p>
-				<p>
-					This wouldn't be a big issue, right? Not quite. With unfinished software, you have buggy code, and the buggy code in question (Registry Redirect) would cause things to break for the user (Firefox forks being the main focus). Those same users would blame those forks instead of Revert8Plus due to the mentality that "Transformation Packs only modify how Windows looks, so it must be the fork's fault."
-				</p>
-			<hr />
-			<h3>Use old tweaking software, lose your OS!</h3>
-				<p>
-					<center><i>"But... but... it works fine on my machine™"</i></center>
-				</p>
-				<img
-				class="image"
-				src="img/re8pl/blackscreen.png"
-				style="position: relative; float: right; z-index: 1"
-				/>
-				<p>
-					The fact that you can get a working install at all is impressive. Why do you ask? Well, Revert8Plus's last update was in February 2025, when the latest versions of OpenGlass & Legacy were 1.3 and 1.4. (For clarification, as of writing this, the OpenGlass Standard repo was archived, and Legacy is at version 2.4.1.2083.)
-				</p>
-				<p>
-					A lot has changed since then, and that change is Microsoft altering how some things are handled inside DWM and such. With this, ALTaleX531 had to make an announcement about dropping support for 24H2 for the time being and later fixing support. All of this wasn't known to users of Revert8Plus, which left many of them playing a game of luck with DWM and whether they could use their PC or not.
-				</p>
-				<p>
-					And of course, this issue is still present to this day on the latest Revert8Plus build as of the writing of this blog article.
-				</p>
-				<p>
-					With the passage of every month, the number of issues increases thanks to monthly updates changing how things work internally, while the tools used in Revert8Plus become older and more outdated by the day.
-				</p>
-			<hr />
-			<h3>...The solution?</h3>
-				<p>
-					Sadly, there is no perfect solution if you want something that does everything for you automatically and claims to survive updates. (Not even something like my 21H2to7 Transformation Pack is unaffected by Microsoft screwing things up.)
-				</p>
-				<p>
-					But luckily, the "doing it yourself" method always exists, and if you do not care about having your OS slightly inaccurate (trust me, if you were using Revert8Plus, you didn't care about that), you could get what Revert8Plus offered and more!
-				</p>
-			<hr />
-			<h3>So.... how do I DIY my own 10/11to7?</h3>
-				<p>
-					As making a guide to create a complete 10to7 or 11to7 would get outdated pretty quickly, I'm only going to give the basic advice on getting a basic Xto7 running.
-				</p>
-				<p>
-					To start, you would need the following software, which Revert8Plus uses most of:
-					<ul>
-						<li><a href="https://windhawk.net/">Windhawk</a> by Ramen Software</li>
-						<li><a href="https://github.com/ALTaleX531/OpenGlass/releases">OpenGlass</a> by ALTaleX531</li>
-						<li><a href="https://github.com/namazso/SecureUxTheme/releases">SecureUxTheme</a> by namazso</li>
-						<li><a href="https://www.deviantart.com/vaporvance/art/Aero10-Vista-Seven-909711949">Aero10 (Recommended for Windows 10 users)</a> by vaporvance</li>
-						<li><a href="https://github.com/SandTechStuff/Aero11/releases">Aero11 (Recommended for Windows 11 users, however works on Windows 10)</a> by SandTechStuff</li>
-						<li>StartIsBack++ / StartAllBack / explorer7 (for the Windows 7 taskbar/start menu look and feel)</li>
-					</ul>
-				</p>
-				<p>
-					If you only want the glass look of Windows 7 but not the frames or the rest, you can just download and install <a href="https://github.com/ALTaleX531/OpenGlass">OpenGlass</a> and use this <a href="resources\re8pl\oglbasic.reg">registry file</a> for a glassy Aero-like title bar. <b>(Note: It will import items in HKEY_LOCAL_MACHINE in the registry.)</b>
-				</p>
-				<p>
-					If you want to go crazy with it, you could install <a href="https://windhawk.net/">Windhawk</a> and the Accent Color Sync mod to have more color customization.
-				</p>
-				<p>
-					But if you want to go further, you would need to install <a href="https://github.com/namazso/SecureUxTheme/releases">SecureUxTheme</a> or any other alternative, as Microsoft does not allow you to use third-party themes by default.
-				</p>
-				<p>
-					After you've installed SecureUxTheme, you need to copy the Aero10/11 theme into %systemroot%\Resources\Themes and then run the .theme file, which will greet you with a weird Windows 7 look. This can be fixed by adding the DWORD "CaptionButtons" in 
-					<b>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Dwm</b> or <b>HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\Dwm</b> and setting the value to <b>2</b>. If you want everything done, you can import <a href="resources\re8pl\oglfull.reg">this registry file</a> <b>(Note: It will import items in HKEY_LOCAL_MACHINE in the registry.)</b>.
-					After logging out and back in, you will have your Windows almost look like Windows 7.
-				</p>
-					<center><h4>Windhawk</h4></center>
-						<p>
-							This section is going to be a list of mods that you would need for a basic Windows 7 skin:
-							<ul>
-								<li><a href="https://windhawk.net/mods/aerexplorer">Aerexplorer</a> by Aubymori (<b>Note:</b> Windows 11 users would need to use a fork of the mod made for Windows 11, which can be found <a href="resources\re8pl\aerexplorer11fork.cpp">here</a>, and <a href="https://github.com/raytek-cafe/Files/releases/download/Re8pl/ExplorerFrame.dll">21332's ExplorerFrame.dll</a> for the mod to work correctly)</li>
-								<li><a href="https://windhawk.net/mods/icon-resource-redirect">Resource Redirect</a> by m417z (with the Pane7 Icon Pack that can be found in the mod's settings)</li>
-								<li><a href="https://windhawk.net/mods/accent-color-sync">Accent Color Sync</a> by CatmanFan / Mr._Lechkar</li>
-								<li><a href="https://windhawk.net/mods/eradicate-immersive-menus">Eradicate Context Menus</a> by Aubymori (<b>Note:</b> this won't remove the Windows 11 context menus. You would need to apply the tweak to remove them yourself)</li>
-								<li><a href="https://windhawk.net/mods/legacy-file-copy">Legacy File Copy</a> by rounk-ctrl</li>
-								<li><a href="https://windhawk.net/mods/fix-basic-caption-text">Fix Basic Caption Text</a> by Aubymori</li>
-								<li><a href="https://windhawk.net/mods/win7-alttab-loader">Windows 7/8.x Alt+Tab Loader</a> by Aubymori (<b>Note:</b> You would need <a href="https://github.com/raytek-cafe/Files/releases/download/Re8pl/AltTab.dll">Windows 7's AltTab.dll</a>)</li>
-							</ul>
-						</p>
-					<center><h4>Registry Tweaks</h4></center>
-						<p>
-							You would need perform some changes to the registry to get a good looking 7 skin (<b>Note:</b> Before applying these tweaks, make a backup of those locations or otherwise you will not be able to revert back some of these changes):
-							<ul>
-								<li>OpenGlass tweaks (Already applied)</li>
-								<li><a href="resources\re8pl\metrics.reg">WindowMetrics</a> (Borders, titlebar and button sizes)</li>
-								<li><a href="resources\re8pl\sounds.reg">System Sounds</a> (Note: Not all sounds will be present by default on 11. So you have to replace the %systemroot%\Media folder with this <a href="https://github.com/raytek-cafe/Files/releases/download/Re8pl/Media.7z">one</a>.)</li>
-								<li><a href="resources\re8pl\colors.reg">Colors</a> (Windows 7 colors, both normal and desktop colors.)</li>
-							</ul>
-						</p>
-					<center><h4>Extras</h4></center>
-						<p>
-							Here are some extras that can be applied to your install:
-							<ul>
-								<li><a href="https://github.com/raytek-cafe/Files/releases/download/Re8pl/7Cursors.7z">Windows 7 Cursors</a></li>
-								<li>Aero pointer shadow which can be enabled in main.cpl > Pointers > "Enable pointer shadow".</li>
-								<li><a href="https://winclassic.net/thread/1779/restoring-control-panel-pages-links">Restoring Control Panel Pages/Links</a></li>
-								<li><a href="resources\re8pl\swatches.reg">Windows 7 Colors in the Windows 7 Personalization page</a> (<b>Note:</b> This will require <a href="https://github.com/raytek-cafe/Files/releases/download/Re8pl/themecpl7.dll">themecpl7.dll</a> inside System32.)</li>
-								<li>You can find even more tweaks on sites like <a href="https://winclassic.net/">WinClassic</a> and other similar forum pages.</li>
-							</ul>
-						</p>
-				<hr />
-				<h3>conclusions</h3>
-					<p>
-						In conclusion, software like Revert8Plus or 21H2to7, no matter how great they can be, will always carry the risk of damaging your OS. This risk arises when Microsoft inevitably updates one of the core components in Windows, 
-						potentially causing the tweaking tools to suddenly break. In the case of Revert8Plus, this has already happened, and since Teknix is currently focused on V5, this flaw will only get fixed when V5 is released.
-					</p>
-					<p>
-						In the other hand, doing things yourself might seem difficult, but once you get it set up, it becomes easier and provides more customization options, including custom themes, custom icons, and much more, as shown in these examples:
-					</p>
-				<div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-end; height: auto;">
-					<div style="text-align: center; margin: 10px;">
-						<img class="image" src="img/re8pl/setup1.png" style="max-width: 100%; height: auto;">
-						<div>My setup (Using a customized Aero8 theme)</div>
-					</div>
-					<div style="text-align: center; margin: 10px;">
-						<img class="image" src="img/re8pl/setup2.png" style="max-width: 100%; height: auto;">
-						<div>PatrickTBP's setup (Using the Uniko10 theme)</div>
-					</div>
-					<div style="text-align: center; margin: 10px;">
-						<img class="image" src="img/re8pl/setup3.png" style="max-width: 100%; height: auto;">
-						<div>PatrickTBP's 10toVista setup</div>
-					</div>
-					<div style="text-align: center; margin: 10px;">
-						<img class="image" src="img/re8pl/setup4.png" style="max-width: 100%; height: auto;">
-						<div>Deporitazz's 10toXP setup</div>
-					</div>
-				</div>
-				<center><b>You can get really creative with DIY setups if you try hard enough, I recommend you try doing one yourself! You might learn something along the way too.</b></center>
-				<hr /> 
+            <h2>don't use Revert8Plus v4, DIY instead!</h2>
+            <p class="author">by ImSwordQueen</p>
+            <h3>before I start...</h3>
+            <p>
+              This is <b>not</b> an attack against Teknix or his project (nor
+              was it made because his transformation pack is more popular than
+              mine). He has done incredible things, and it is insane what he has
+              accomplished with Revert8Plus.
+              <b
+                >I even suggest helping him financially if you can
+                <a href="https://teknixstuff.com/Network/Donate/">here</a></b
+              >.
+            </p>
+            <p>
+              But despite the incredible work put into it, Revert8Plus has
+              caused problems for
+              <a
+                href="https://github.com/raytek-cafe/Okaeri-Legacy/wiki/Okaeri-is-broken-on-Revert8Plus!"
+                >developers</a
+              >
+              and its users.
+            </p>
+            <hr />
+            <img
+              class="image"
+              src="img/re8pl/ffbroke.png"
+              style="position: relative; float: right; z-index: 1"
+            />
+            <h3>the growing issues</h3>
+            <p>
+              Revert8Plus V4 was never finished software (build 1137 is the last
+              build that was marked as the 'latest', while the rest were marked
+              as 'pre-release'), and with that, certain features were left
+              unfinished or broken (e.g. logon screen issues, display settings
+              refusing to launch, or the 'Custom' button in the installer not
+              working due to not being finished in time for the deadline).
+            </p>
+            <p>
+              This is a pretty small issue, right? Not quite. With unfinished
+              software, you have buggy code, and the buggy code in question
+              (Registry Redirect) would cause things to break for the user
+              (Firefox forks being the main focus). Those same users would blame
+              those forks instead of Revert8Plus due to the mentality that
+              "transformation Packs only modify how Windows looks, so it must be
+              the fork's fault."
+            </p>
+            <hr />
+            <img
+              class="image"
+              src="img/re8pl/blackscreen.png"
+              style="position: relative; float: right; z-index: 1"
+            />
+            <h3>use old tweaking software, lose your OS!</h3>
+            <p>
+              <i>"B-but... it works fine on my machine!™"</i>
+            </p>
+            <p>
+              The fact that you can get a working install at all is impressive.
+              Why so? Well, Revert8Plus's last update was in February 2025, when
+              the latest versions of OpenGlass & Legacy were 1.3 and 1.4 (for
+              clarification, as of writing this, the OpenGlass Standard repo was
+              archived, and Legacy is at version 2.4.1.2083).
+            </p>
+            <p>
+              A lot has changed since then, mainly Microsoft altering how some
+              things are handled inside DWM. With this, ALTaleX531 had to make
+              an announcement about dropping support for 24H2 for the time being
+              and fixing it later. Revert8Plus users were not aware of this,
+              which left many of them playing a game of luck with DWM and
+              whether they could use their PC or not.
+            </p>
+            <p>
+              And, of course, this issue is still present to this day on the
+              latest Revert8Plus build as of me writing this blog article.
+            </p>
+            <p>
+              With each passing month, the number of issues increases thanks to
+              monthly updates changing how things work internally, while the
+              tools used in Revert8Plus become older and more outdated by the
+              day.
+            </p>
+            <hr />
+            <h3>...the solution?</h3>
+            <p>
+              Sadly, there is no perfect solution if you want something that
+              does everything for you automatically and claims to survive
+              updates (not even my 21H2to7 Transformation Pack is
+              immune to Microsoft screwing things up).
+            </p>
+            <p>
+              But luckily, the "do it yourself" method always exists, and if you
+              do not care about having your OS slightly inaccurate (which if you
+              were using Revert8Plus, you didn't care about that), you could get
+              what Revert8Plus offered and more!
+            </p>
+            <hr />
+            <h3>so how do I DIY my own 10/11to7?</h3>
+            <p>
+              As making a guide to create a complete 10to7 or 11to7 would get
+              outdated pretty quickly, I'm only going to give the basic advice
+              on getting a basic *to7 running.
+            </p>
+            <p>
+              To start, you need the following software, which Revert8Plus uses
+              most of:
+            </p>
+            <ul>
+              <li>
+                <a href="https://windhawk.net/">Windhawk</a> by Ramen Software
+              </li>
+              <li>
+                <a href="https://github.com/ALTaleX531/OpenGlass/releases"
+                  >OpenGlass</a
+                >
+                by ALTaleX531
+              </li>
+              <li>
+                <a href="https://github.com/namazso/SecureUxTheme/releases"
+                  >SecureUxTheme</a
+                >
+                by namazso
+              </li>
+              <li>
+                <a
+                  href="https://www.deviantart.com/vaporvance/art/Aero10-Vista-Seven-909711949"
+                  >Aero10 (Recommended for Windows 10 users)</a
+                >
+                by vaporvance
+              </li>
+              <li>
+                <a href="https://github.com/SandTechStuff/Aero11/releases"
+                  >Aero11 (Recommended for Windows 11 users, however works on
+                  Windows 10)</a
+                >
+                by SandTechStuff
+              </li>
+              <li>
+                StartIsBack++ / StartAllBack / explorer7 (for the Windows 7
+                taskbar/start menu look and feel)
+              </li>
+            </ul>
+            <p>
+              If you only want the glass look of Windows 7 but not the frames or
+              the rest, you can just download and install
+              <a href="https://github.com/ALTaleX531/OpenGlass">OpenGlass</a>
+              and use this
+              <a href="resources\re8pl\oglbasic.reg">registry file</a> for a
+              glassy Aero-like title bar (<b>Note:</b> it will import items in
+              <code>HKEY_LOCAL_MACHINE</code> in the registry).
+            </p>
+            <p>
+              If you wanna go crazy with it, you could install
+              <a href="https://windhawk.net/">Windhawk</a> and the Accent Color
+              Sync mod to have more color customization.
+            </p>
+            <p>
+              But if you want to go further, you would need to install
+              <a href="https://github.com/namazso/SecureUxTheme/releases"
+                >SecureUxTheme</a
+              >
+              or any other alternative, as Microsoft does not allow you to use
+              third-party themes by default.
+            </p>
+            <p>
+              After you've installed SecureUxTheme, you need to copy the
+              Aero10/11 theme into
+              <code>%systemroot%\Resources\Themes</code> and then run the .theme
+              file, which will greet you with a weird Windows 7 look. This can
+              be fixed by adding the DWORD <code>"CaptionButtons"</code> in
+              <code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Dwm</code>
+              or
+              <code>HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\Dwm</code>
+              and setting the value to <code>2</code>. If you want everything
+              done, you can import
+              <a href="resources\re8pl\oglfull.reg">this registry file</a>
+              (<b>Note:</b> it will import items in
+              <code>HKEY_LOCAL_MACHINE</code> in the registry). After logging
+              out and back in, you will have your Windows almost look like
+              Windows 7.
+            </p>
+            <h4>Windhawk</h4>
+            <p>
+              This section is going to be a list of mods required for a basic
+              Windows 7 skin:
+            </p>
+            <ul>
+              <li>
+                <a href="https://windhawk.net/mods/aerexplorer">Aerexplorer</a>
+                by Aubymori (<b>Note:</b> Windows 11 users have to use a fork of
+                the mod made for Windows 11, which can be found
+                <a href="resources\re8pl\aerexplorer11fork.cpp">here</a>, and
+                <a
+                  href="https://github.com/raytek-cafe/Files/releases/download/Re8pl/ExplorerFrame.dll"
+                  >21332's ExplorerFrame.dll</a
+                >
+                for the mod to work correctly)
+              </li>
+              <li>
+                <a href="https://windhawk.net/mods/icon-resource-redirect"
+                  >Resource Redirect</a
+                >
+                by m417z (with the Pane7 Icon Pack that can be found in the
+                mod's settings)
+              </li>
+              <li>
+                <a href="https://windhawk.net/mods/accent-color-sync"
+                  >Accent Color Sync</a
+                >
+                by CatmanFan / Mr._Lechkar
+              </li>
+              <li>
+                <a href="https://windhawk.net/mods/eradicate-immersive-menus"
+                  >Eradicate Context Menus</a
+                >
+                by Aubymori (<b>Note:</b> this won't remove the Windows 11
+                context menus. You need to apply the tweak to remove them
+                yourself)
+              </li>
+              <li>
+                <a href="https://windhawk.net/mods/legacy-file-copy"
+                  >Legacy File Copy</a
+                >
+                by rounk-ctrl
+              </li>
+              <li>
+                <a href="https://windhawk.net/mods/fix-basic-caption-text"
+                  >Fix Basic Caption Text</a
+                >
+                by Aubymori
+              </li>
+              <li>
+                <a href="https://windhawk.net/mods/win7-alttab-loader"
+                  >Windows 7/8.x Alt+Tab Loader</a
+                >
+                by Aubymori (<b>Note:</b> you also need
+                <a
+                  href="https://github.com/raytek-cafe/Files/releases/download/Re8pl/AltTab.dll"
+                  >Windows 7's AltTab.dll</a
+                >)
+              </li>
+            </ul>
+            <h4>Registry Tweaks</h4>
+            <p>
+              You need to perform some changes to the registry to get a good
+              looking 7 skin (<b>Note:</b> before applying these tweaks, make a
+              backup of those locations, otherwise you will not be able to
+              revert back some of these changes):
+            </p>
+            <ul>
+              <li>OpenGlass tweaks (Already applied)</li>
+              <li>
+                <a href="resources\re8pl\metrics.reg">WindowMetrics</a>
+                (Borders, titlebar and button sizes)
+              </li>
+              <li>
+                <a href="resources\re8pl\sounds.reg">System Sounds</a> (Note:
+                Not all sounds will be present by default on 11. So you have to
+                replace the %systemroot%\Media folder with this
+                <a
+                  href="https://github.com/raytek-cafe/Files/releases/download/Re8pl/Media.7z"
+                  >one</a
+                >)
+              </li>
+              <li>
+                <a href="resources\re8pl\colors.reg">Colors</a> (Windows 7
+                colors, both normal and desktop colors)
+              </li>
+            </ul>
+            <h4>Extras</h4>
+            <p>Here are some extras that can be applied to your install:</p>
+            <ul>
+              <li>
+                <a
+                  href="https://github.com/raytek-cafe/Files/releases/download/Re8pl/7Cursors.7z"
+                  >Windows 7 Cursors</a
+                >
+              </li>
+              <li>
+                Aero pointer shadow which can be enabled in main.cpl > Pointers
+                > "Enable pointer shadow".
+              </li>
+              <li>
+                <a
+                  href="https://winclassic.net/thread/1779/restoring-control-panel-pages-links"
+                  >Restoring Control Panel Pages/Links</a
+                >
+              </li>
+              <li>
+                <a href="resources\re8pl\swatches.reg"
+                  >Windows 7 Colors in the Windows 7 Personalization page</a
+                >
+                (<b>Note:</b> this will require
+                <a
+                  href="https://github.com/raytek-cafe/Files/releases/download/Re8pl/themecpl7.dll"
+                  >themecpl7.dll</a
+                >
+                inside System32)
+              </li>
+              <li>
+                You can find even more tweaks on sites like
+                <a href="https://winclassic.net/">WinClassic</a> and other
+                similar forum pages.
+              </li>
+            </ul>
+            <hr />
+            <h3>conclusions</h3>
+            <p>
+              In conclusion, software like Revert8Plus or 21H2to7, no matter how
+              great they can be, will always carry the risk of damaging your OS.
+              This risk arises when Microsoft inevitably updates one of the core
+              components in Windows, potentially causing the tweaking tools to
+              suddenly break. In the case of Revert8Plus, this has already
+              happened, and since Teknix is currently focused on V5, this flaw
+              will only get fixed when V5 is released.
+            </p>
+            <p>
+              In the other hand, doing things yourself might seem difficult, but
+              once you get it set up, it becomes easier and provides more
+              customization options, including custom themes, custom icons, and
+              much more, as shown in these examples:
+            </p>
+            <div
+              style="
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: flex-end;
+                height: auto;
+              "
+            >
+              <div style="text-align: center; margin: 10px">
+                <img
+                  class="image"
+                  src="img/re8pl/setup1.png"
+                  style="max-width: 100%; height: auto"
+                />
+                <div>My setup (Using a customized Aero8 theme)</div>
+              </div>
+              <div style="text-align: center; margin: 10px">
+                <img
+                  class="image"
+                  src="img/re8pl/setup2.png"
+                  style="max-width: 100%; height: auto"
+                />
+                <div>PatrickTBP's setup (Using the Uniko10 theme)</div>
+              </div>
+              <div style="text-align: center; margin: 10px">
+                <img
+                  class="image"
+                  src="img/re8pl/setup3.png"
+                  style="max-width: 100%; height: auto"
+                />
+                <div>PatrickTBP's 10toVista setup</div>
+              </div>
+              <div style="text-align: center; margin: 10px">
+                <img
+                  class="image"
+                  src="img/re8pl/setup4.png"
+                  style="max-width: 100%; height: auto"
+                />
+                <div>Deporitazz's 10toXP setup</div>
+              </div>
+            </div>
+            <hr />
+            <i
+              >You can get really creative with DIY setups if you try hard
+              enough, I recommend you try doing one yourself! You'll surely learn
+              something along the way too.</i
+            >
           </div>
           <div class="footer">
             <p>Site design is &copy 2025 amaryllidinae_</p>

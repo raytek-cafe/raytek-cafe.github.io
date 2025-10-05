@@ -52,7 +52,7 @@
 @font-face {
   font-family: "Ruberoid";
   font-weight: 500;
-  src: url(fonts/Ruberoid-SemiBold.ttf)
+  src: url(fonts/Ruberoid-SemiBold.ttf);
 }
 
 @font-face {
@@ -65,6 +65,11 @@
 @font-face {
   font-family: "decoder-rtk";
   src: url(fonts/decoder-rtk.ttf);
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url(fonts/JetBrainsMono-Regular.ttf);
 }
 
 /* ====================================================================================== color scheme variables */
@@ -571,6 +576,23 @@ a:hover {
   box-shadow: inset 10px 0 20px -10px rgba(0, 0, 0, 0.5),
     /* Left side */ inset -10px 0 20px -10px rgba(0, 0, 0, 0.5); /* Right side */
   flex-grow: 1; /* Allow content to grow and fill available space */
+}
+
+.author {
+  font-size: 9pt;
+  font-style: italic;
+  margin-top: -20px;
+}
+
+code {
+  font-family: "JetBrains Mono";
+  background-color: #202020;
+  padding: 2px 4px;
+  margin: 0px 2px;
+  border-radius: 2px;
+  font-weight: initial;
+  color: #ffffff;
+  font-size: 10pt;
 }
 
 .image {
