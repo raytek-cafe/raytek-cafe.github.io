@@ -705,3 +705,31 @@ th {
     overflow-x: auto; /* Allow horizontal scrolling for tables */
   }
 }
+
+/* ====================================================================================================== Jekyll */
+pre {
+  background: #202020;
+  padding: 4px;
+  overflow-x: auto;
+  border: 1px solid #727272;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Because Jekyll makes this automatically a figure, we have to override browser styles */
+figure.highlight {
+  margin-inline-start: 0.5rem;
+  margin-inline-end: 0.5rem;
+}
+
+.toc-container {
+  height: 100%;
+  background-color: #202020;
+  padding: 3px;
+}
+
+.toc-cell {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 3px;
+}
