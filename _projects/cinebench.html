@@ -1,0 +1,113 @@
+---
+title: raytek Cinebench scoreboard
+layout: default
+date: 06.12.2025 {% comment %} change date on modification {% endcomment %}
+---
+<h1>{{ page.title }}</h1>
+
+<p>
+  <a href="https://archive.org/download/cinebench-r-23/CinebenchR23.zip" target="_blank">Cinebench R23 (archive.org)</a>
+</p>
+
+<h3>Multi thread</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Score</th>
+      <th>User</th>
+      <th>CPU</th>
+      <th>Power/Temps</th>
+      <th>Notes</th>
+      <th>Date</th>
+      <th>Screenshot</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% assign sorted_entries = site.data.benchmarks_mt | sort: 'score' | reverse %}
+    {% assign standing = 1 %}
+    {% assign last_score = null %}
+    {% assign rank_offset = 0 %}
+
+    {% for entry in sorted_entries %}
+      {% if last_score != null %}
+        {% if entry.score < last_score %}
+          {% assign standing = standing | plus: 1 | plus: rank_offset %}
+          {% assign rank_offset = 0 %}
+        {% else %}
+          {% assign rank_offset = rank_offset | plus: 1 %}
+        {% endif %}
+      {% endif %}
+      <tr>
+        <td>{{ standing }}</td>
+        <td>{{ entry.score }}</td>
+        <td>{{ entry.user }}</td>
+        <td>{{ entry.cpu }}</td>
+        <td>{{ entry.power }}</td>
+        <td
+          {% if entry.notes and entry.notes != '-' %}
+            class="table-notes"
+          {% endif %}
+        >
+          {{- entry.notes | default: '-' | strip -}}
+        </td>
+        <td>{{ entry.date }}</td>
+        <td>{{ entry.screenshot }}</td>
+      </tr>
+      {% assign last_score = entry.score %}
+    {% endfor %}
+  </tbody>
+</table>
+
+<h3>Single thread</h3>
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Score</th>
+      <th>User</th>
+      <th>CPU</th>
+      <th>Power/Temps</th>
+      <th>Notes</th>
+      <th>Date</th>
+      <th>Screenshot</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% assign sorted_entries = site.data.benchmarks_st | sort: 'score' | reverse %}
+    {% assign standing = 1 %}
+    {% assign last_score = null %}
+    {% assign rank_offset = 0 %}
+
+    {% for entry in sorted_entries %}
+      {% if last_score != null %}
+        {% if entry.score < last_score %}
+          {% assign standing = standing | plus: 1 | plus: rank_offset %}
+          {% assign rank_offset = 0 %}
+        {% else %}
+          {% assign rank_offset = rank_offset | plus: 1 %}
+        {% endif %}
+      {% endif %}
+      <tr>
+        <td>{{ standing }}</td>
+        <td>{{ entry.score }}</td>
+        <td>{{ entry.user }}</td>
+        <td>{{ entry.cpu }}</td>
+        <td>
+          {{- entry.power | default: '-' | strip -}}
+        </td>
+        <td
+          {% if entry.notes and entry.notes != '-' %}
+            class="table-notes"
+          {% endif %}
+        >
+          {{- entry.notes | default: '-' | strip -}}
+        </td>
+        <td>{{ entry.date }}</td>
+        <td>{{ entry.screenshot }}</td>
+      </tr>
+      {% assign last_score = entry.score %}
+    {% endfor %}
+  </tbody>
+</table>

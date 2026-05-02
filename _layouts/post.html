@@ -1,0 +1,37 @@
+---
+layout: default
+---
+<h2>{{ page.title }}</h2>
+<p class="subheader">
+  {{ page.date | date: '%B %d, %Y' }}
+  {% assign authorCount = page.author | size %}
+  {% if authorCount > 0 -%}
+    –
+    {% for author_id in page.author -%}
+      {%- assign author_obj = site.authors | where_exp: 'a', 'a.path contains author_id' | first -%}
+      {%- if forloop.first -%}
+        {%- if author_obj -%}
+          <a href="{{ author_obj.url }}">{{ author_obj.name }}</a>
+        {%- else -%}
+          {{ author_id }}
+        {%- endif -%}
+      {%- elsif forloop.last -%}
+        &nbsp;and&nbsp;
+        {%- if author_obj -%}
+          <a href="{{ author_obj.url }}">{{ author_obj.name }}</a>
+        {%- else -%}
+          {{ author_id }}
+        {%- endif -%}
+      {%- else -%}
+        ,&nbsp;
+        {%- if author_obj -%}
+          <a href="{{ author_obj.url }}">{{ author_obj.name }}</a>
+        {%- else -%}
+          {{ author_id }}
+        {%- endif -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {% endif %}
+</p>
+
+{{ content }}

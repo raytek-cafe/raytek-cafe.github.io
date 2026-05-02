@@ -1,0 +1,34 @@
+---
+title: Custom ISO reviews
+layout: default
+date: 12.11.2025 {% comment %} change date on modification {% endcomment %}
+---
+<h1>{{ page.title }}</h1>
+
+{% comment %}
+Map verdict values to display label and icon
+{% endcomment %}
+{% assign verdicts = "recommended|<i class='fa fa-check'></i>&nbsp; Recommended,
+   good|<i class='fa fa-info'></i>&nbsp; Good to use,
+   terrible|<i class='fa fa-bug'></i>&nbsp; Just terrible!,
+   avoid|<i class='fa fa-ban'></i>&nbsp; Avoid at all costs!"
+  | split: ','
+%}
+
+{% for v in verdicts %}
+  {% assign parts = v | split: '|' %}
+  {% assign verdict_key = parts[0] | strip %}
+  {% assign verdict_label = parts[1] | strip %}
+
+  {% assign items = site['custom-isos'] | where: 'verdict', verdict_key | sort: 'date' %}
+  {% if items.size > 0 %}
+    <p>{{ verdict_label }}</p>
+    <ul>
+      {% for item in items %}
+        <li>
+          <a href="{{ item.url }}">{{ item.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endfor %}

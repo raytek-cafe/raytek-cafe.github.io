@@ -1,0 +1,32 @@
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+sass:
+  style: compressed
+
+defaults:
+  - scope:
+      path: "assets/files"
+    values:
+      user-file: true
+
+.exclude:
+ - ".vscode"
+
+page_excerpts: true
+excerpt_separator: <!--more-->
+
+collections:
+  posts:
+    output: true
+    permalink: /blog/:path/
+  authors:
+    output: true
+  projects:
+    output: true
+    permalink: /projects/:path/
+  custom-isos:
+    output: true
+    permalink: /projects/custom-isos/:path/

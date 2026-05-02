@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+{% include head.html %}
+
+<body>
+    <div class="container">
+        <div class="gap">&nbsp;</div>
+        <div class="page-container">
+            <div class="page">
+                {% include header.html %}
+                {% include navbar.html %}
+                {% include player.html %}
+                <div class="content">{{ content }}</div>
+                {% include footer.html %}
+            </div>
+        </div>
+        <div class="gap">&nbsp;</div>
+    </div>
+    <script src="/assets/js/script.js" defer></script>
+</body>
+
+</html>

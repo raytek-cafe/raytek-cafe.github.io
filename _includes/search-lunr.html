@@ -1,0 +1,167 @@
+<script src="/assets/js/lunr.js"></script>
+
+<script>
+  {% assign counter = 0 %}
+  var documents = [
+
+    {% for page in site.pages %}
+      {% unless page.url contains '.xml'
+        or page.url contains 'assets'
+        or page.search_exclude %}
+      {
+        "id": {{ counter }},
+        "url": "{{ site.url }}{{ page.url }}",
+        "title": {{ page.title | jsonify }},
+        "body": {{ page.content
+          | strip_html
+          | jsonify
+        }}
+      }{% assign counter = counter | plus: 1 %},{% endunless %}
+    {% endfor %}
+
+    {% for page in site.posts %}
+      {
+        "id": {{ counter }},
+        "url": "{{ site.url }}{{ page.url }}",
+        "title": {{ page.title | jsonify }},
+        "body": {{ page.content
+          | strip_html
+          | jsonify
+        }}
+      }{% assign counter = counter | plus: 1 %},{% endfor %}
+
+    {% for page in site.projects %}
+      {
+        "id": {{ counter }},
+        "url": "{{ site.url }}{{ page.url }}",
+        "title": {{ page.title | jsonify }},
+        "body": {{ page.content
+          | strip_html
+          | jsonify
+        }}
+      }{% assign counter = counter | plus: 1 %},{% endfor %}
+
+    {% for page in site.custom-isos %}
+      {
+        "id": {{ counter }},
+        "url": "{{ site.url }}{{ page.url }}",
+        "title": {{ page.title | jsonify }},
+        "body": {{ page.content
+          | strip_html
+          | jsonify
+        }}
+      }{% assign counter = counter | plus: 1 %},{% endfor %}
+
+  ];
+
+  // remove trailing comma safely
+  documents.pop();
+
+  var idx = lunr(function () {
+    this.ref('id');
+    this.field('title');
+    this.field('body');
+
+    documents.forEach(function (doc) {
+      this.add(doc);
+    }, this);
+  });
+
+  function lunr_search(term) {
+    var resultsContainer = document.getElementById('lunrsearchresults');
+    resultsContainer.innerHTML = '<ul></ul>';
+
+    if (!term) return false;
+
+    resultsContainer.innerHTML =
+      "<p>Search results for '" + term + "'</p>" + resultsContainer.innerHTML;
+
+    var results = idx.search(term);
+
+    if (results.length === 0) {
+      resultsContainer.querySelector('ul').innerHTML =
+        "<li class='lunrsearchresult'>No results found.</li>";
+      return false;
+    }
+
+    results.forEach(function (result) {
+      var doc = documents[result.ref];
+      var excerpt = doc.body.substring(0, 160) + '…';
+
+      resultsContainer.querySelector('ul').innerHTML +=
+        "<li class='lunrsearchresult'>" +
+          "<a href='" + doc.url + "'>" +
+            "<span class='lunrtitle'>" + doc.title + "</span><br>" +
+            "<span class='body'>" + excerpt + "</span><br>" +
+            "<span class='url'>" + doc.url + "</span>" +
+          "</a>" +
+        "</li>";
+    });
+
+    return false;
+  }
+</script>
+
+<style>
+  #lunrsearchresults {
+    padding-top: 0;
+  }
+  .lunrsearchresult {
+    padding-bottom: 0;
+  }
+  .lunrsearchresult .lunrtitle {
+    color: var(--link-color);
+  }
+  .lunrsearchresult .url {
+    color: #c8c8c8;
+  }
+  .lunrsearchresult a {
+    display: block;
+    color: #929292;
+    padding-bottom: 10px;
+  }
+  .lunrsearchresult a:hover,
+  .lunrsearchresult a:focus {
+    text-decoration: none;
+  }
+  .lunrsearchresult a:hover .lunrtitle {
+    text-decoration: underline;
+  }
+</style>
+
+<form onsubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+  <p>
+    <input
+      type="text"
+      class="form-control"
+      id="lunrsearch"
+      name="q"
+      maxlength="255"
+      placeholder="Search via Lunr.js"
+    >
+  </p>
+</form>
+
+<div id="lunrsearchresults">
+  <ul></ul>
+</div>
+
+<!--
+  "body": {{ page.content
+    | replace: "</p>", " "
+    | replace: "</li>", " "
+    | replace: "</h1>", " "
+    | replace: "</h2>", " "
+    | replace: "</h3>", " "
+    | replace: "</h4>", " "
+    | strip_html
+    | replace: "\n", " "
+    | replace: "\r", " "
+    | replace: "\t", " "
+    | replace: "  ", " "
+    | replace: "  ", " "
+    | replace: "  ", " "
+    | strip
+    | jsonify
+  }}
+-->

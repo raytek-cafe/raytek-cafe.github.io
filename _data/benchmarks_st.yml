@@ -1,0 +1,47 @@
+- score: 1734
+  user: amrls
+  cpu: Ryzen 7 8845HS
+  power: 30W@65°C
+  notes: "<b>Legion Slim 5 Gen 9 2024</b> (16AHP9); <br /> Completed 2 passes<br />"
+  date: 06.04.2025
+  screenshot: '<a target="_blank" href="/assets/images/benchmarks/legion-sc.png">Link</a>'
+
+- score: 1526
+  user: ImSwordQueen
+  cpu: Ryzen 5 5600X
+  date: 06.04.2025
+  screenshot: '<a target="_blank" href="/assets/images/benchmarks/sword-sc.png">Link</a>'
+
+- score: 1504
+  user: Ardaninho
+  cpu: Ryzen 7 5700X
+  notes: Running on single channel 32GB RAM
+  date: 05.12.2025
+  screenshot: '<a target="_blank" href="/assets/images/benchmarks/ardan_pc.jpg">Link</a>'
+
+- score: 1267
+  user: sealy
+  cpu: Ryzen 5 5500
+  date: 09.06.2025
+  screenshot: '<a target="blank" href="/assets/images/benchmarks/sealy.png">Link</a>'
+
+- score: 1300
+  user: Ardaninho
+  cpu: Ryzen 5 5600H
+  power: "<b>Max. T:</b> 69°C"
+  notes: "<b>IdeaPad Gaming 3</b> (15ACH6)"
+  date: 08.06.2025
+  screenshot: '<a target="_blank" href="/assets/images/benchmarks/ardan-sc.png">Link</a>'
+
+- score: 1195
+  user: xodus
+  cpu: Core i5 10300H
+  notes: "<b>MSI GF63 Thin</b>; <br />enabled Turbo Mode in laptop BIOS; <br /><b>Max. T:</b> 70°C"
+  date: 06.04.2025
+  screenshot: '<a target="_blank" href="/assets/images/benchmarks/gf-sc.png">Link</a>'
+
+- score: 847
+  user: Arima
+  cpu: Xeon E3-1220 v3
+  date: 09.06.2025
+  screenshot: '<a target="_blank" href="/assets/images/benchmarks/arima.png">Link</a>'
